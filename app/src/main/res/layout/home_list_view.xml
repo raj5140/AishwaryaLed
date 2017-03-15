@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Show Name XXX"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView222"
+        android:layout_below="@+id/textView111"
+        android:layout_alignStart="@+id/textView111" />
+
+    <TextView
+        android:text="Date XXX"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView333"
+        android:layout_below="@+id/textView222"
+        android:layout_alignStart="@+id/textView222" />
+
+    <TextView
+        android:text="SQF REQ XXX"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView444"
+        android:layout_below="@+id/textView333"
+        android:layout_alignStart="@+id/textView333" />
+
+    <TextView
+        android:text="Show Name"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtA"
+        android:layout_alignParentStart="true"
+        android:id="@+id/txtB" />
+
+    <TextView
+        android:text="SQF REQ"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtC"
+        android:id="@+id/txtD" />
+
+    <TextView
+        android:text="No. of Boards"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtD"
+        android:id="@+id/txtE" />
+
+    <TextView
+        android:text="Date"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtC"
+        android:layout_below="@+id/txtB" />
+
+    <TextView
+        android:text="No. of Boards XXX"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView555"
+        android:layout_below="@+id/textView444"
+        android:layout_alignStart="@+id/textView444" />
+
+    <TextView
+        android:id="@+id/txtA"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:text="Client Name"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView111"
+        android:layout_alignBottom="@+id/textView111"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Client Name XXX"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView111"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Date XXX"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:id="@+id/textView7"
+        android:layout_toRightOf="@+id/textViewaaa"
+        android:layout_alignBaseline="@+id/textViewaaa"
+        android:layout_alignBottom="@+id/textViewaaa"
+        android:layout_alignEnd="@+id/imageButton" />
+
+    <TextView
+        android:text="To"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewaaa"
+        android:layout_below="@+id/textView222"
+        android:layout_toRightOf="@+id/textView333"
+        android:layout_marginLeft="17dp"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/info_button"
+        android:id="@+id/imageButton"
+        android:layout_alignBottom="@+id/textView555"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent" />
+
+
+</RelativeLayout>

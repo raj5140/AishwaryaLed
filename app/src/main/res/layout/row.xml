@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativetop"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="20dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/customborder"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true">
+
+
+    <EditText
+        android:id="@+id/width"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toEndOf="@+id/boardView"
+        android:background="@layout/rounded_border_edittext"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@drawable/color_cursor" />
+
+    <TextView
+        android:id="@+id/xView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="19dp"
+        android:layout_toRightOf="@+id/width"
+        android:text="X"
+        android:textColor="#FF040106"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/xView"
+        android:background="@layout/rounded_border_edittext"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@drawable/color_cursor" />
+
+
+    <ImageButton
+        android:id="@+id/remove"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/xView"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.20"
+        android:background="@color/common_google_signin_btn_text_dark_focused"
+        android:src="@android:drawable/ic_input_delete" />
+
+    <EditText
+        android:id="@+id/zerotextView"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/xView"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/height"
+        android:background="@drawable/disabled_edittext_round"
+        android:clickable="false"
+        android:focusable="false"
+        android:paddingLeft="15dp"
+        android:text="0"
+        android:textColor="#FF040106"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/textViewNoOfDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4bb"
+        android:paddingTop="10dp"
+        android:text="Number of days"
+        android:textColor="#FF040106"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewNoOfDays"
+        android:paddingTop="10dp"
+        android:text="Total"
+        android:textColor="#FF040106"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/textTotal"
+        android:layout_alignBottom="@+id/textTotal"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/textTotal"
+        android:background="@drawable/disabled_edittext_round"
+        android:clickable="false"
+        android:ems="3"
+        android:focusable="false"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@drawable/color_cursor" />
+
+    <TextView
+        android:id="@+id/daysTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewNoOfDays"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/editTotal"
+        android:paddingTop="10dp"
+        android:text="Days"
+        android:textColor="#FF040106"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/daysEditTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/daysTotal"
+        android:layout_alignBottom="@+id/daysTotal"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/daysTotal"
+        android:background="@drawable/disabled_edittext_round"
+        android:clickable="false"
+        android:ems="4"
+        android:focusable="false"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@drawable/color_cursor" />
+
+
+    <TextView
+        android:id="@+id/sqFtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewNoOfDays"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/daysEditTotal"
+        android:paddingTop="10dp"
+        android:text="sqft"
+        android:textColor="#FF040106"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/boardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/xView"
+        android:layout_alignBottom="@+id/xView"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="20dp"
+        android:paddingTop="18dp"
+        android:text="Board Size"
+        android:textColor="#FF040106"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/noOfDaysEdt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_above="@+id/sqFtTotal"
+        android:layout_alignStart="@+id/boardNum"
+        android:background="@layout/rounded_border_edittext"
+        android:ems="10"
+        android:hint="number of days"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@drawable/color_cursor" />
+
+    <EditText
+        android:id="@+id/totalCst"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/disabled_edittext_round"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Total sq ft"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_above="@+id/noOfDaysEdt"
+        android:layout_alignStart="@+id/noOfDaysEdt" />
+
+    <TextView
+        android:id="@+id/textView4bb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Total Square ft"
+        android:textColor="#FF040106"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/remove"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/boardNum"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@layout/rounded_border_edittext"
+        android:ems="10"
+        android:hint=""
+        android:layout_toLeftOf="@+id/remove"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_above="@+id/totalCst"
+        android:layout_alignStart="@+id/xView" />
+
+    <TextView
+        android:id="@+id/textView4b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dp"
+        android:text="No. of Boards"
+        android:textColor="#FF040106"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_above="@+id/totalCst"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

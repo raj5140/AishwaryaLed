@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/bg_screen1">
+
+    <EditText
+        android:id="@+id/edtxt5"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:hint="Enter Number"
+        android:inputType="number"
+        android:layout_below="@+id/edtxt4"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/txtVw7"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <EditText
+        android:id="@+id/edtxt6"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:hint="Alternate Number"
+        android:inputType="number"
+        android:layout_marginTop="7dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_below="@+id/edtxt5"
+        android:layout_toRightOf="@+id/txtVw7"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/txtVw7"
+        android:text="Mobile Number"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edtxt5"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtVw3"
+        android:text="Company Name"
+        android:textSize="15dp"
+        android:textColor="#FF040106"
+        android:textStyle="bold"
+        android:paddingTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/edtxt1" />
+
+    <EditText
+        android:id="@+id/edtxt1"
+        android:hint="Enter Company Name"
+        android:background="@layout/rounded_border_edittext"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/txtVw2"
+        android:layout_alignStart="@+id/edtxt5" />
+
+    <TextView
+        android:id="@+id/txtVw4"
+        android:text="Person Name"
+        android:textSize="15dp"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edtxt2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtVw5"
+        android:text="Address"
+        android:textSize="15dp"
+        android:paddingBottom="20dp"
+        android:textColor="#FF040106"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtxt4"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtVw1"
+        android:text="ORDER FORM"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="#FF020C93"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/txtVw2"
+        android:text="Client Details"
+        android:textSize="30dp"
+        android:textColor="#FF040106"
+        android:textStyle="bold"
+        android:layout_marginTop="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVw1"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/edtxt2"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:hint="Person to be Contacted"
+        android:layout_marginTop="21dp"
+        android:paddingLeft="10dp"
+        android:freezesText="true"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/edtxt1"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/txtVw7" />
+
+    <TextView
+        android:id="@+id/txtVw6"
+        android:text="Email ID"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#FF040106"
+        android:paddingBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtxt4"
+        android:layout_alignBottom="@+id/edtxt4"
+         />
+
+    <EditText
+        android:id="@+id/edtxt7"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/txtVw9"
+        android:paddingLeft="10dp"
+        android:hint="Show Name"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="350dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/edtxt6"
+        android:layout_toEndOf="@+id/txtVw7" />
+
+    <EditText
+        android:id="@+id/edtxt3"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="10dp"
+        android:hint="Enter Address"
+        android:layout_toRightOf="@+id/txtVw5"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/edtxt2"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/edtxt4"
+        android:hint="Mail ID"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:inputType="textEmailAddress"
+        android:layout_toRightOf="@+id/txtVw6"
+        android:layout_width="match_parent"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_height="30dp"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/edtxt3"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/txtVw9"
+        android:text="Show Name"
+        android:textSize="15dp"
+        android:paddingBottom="3dp"
+        android:textStyle="bold"
+        android:paddingTop="6dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edtxt7"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
+
+</ScrollView>
