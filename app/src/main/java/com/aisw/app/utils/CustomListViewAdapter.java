@@ -8,13 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.aisw.app.R;
 import com.aisw.app.activity.Full_info_page;
-import com.aisw.app.activity.Login_Page;
 
 import java.util.ArrayList;
 

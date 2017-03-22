@@ -44,8 +44,8 @@ import java.util.TimerTask;
 
 public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
 
-    ProgressDialog pd;
-    private  String[] board_size = {"Select Your Size", "8 x 6 ft", "10 x 8 ft", "12 x 8 ft", "12 x 10 ft", "16 x 10 ft", "16 x 12 ft", "20 x 10 ft", "22 x 10 ft", "24 x 12 ft", "30 x 10 ft", "40 x 10 ft", "50 x 10 ft", "60 x 10 ft", "70 x 10 ft", "80 x 10 ft"};
+//    ProgressDialog pd;
+//    private  String[] board_size = {"Select Your Size", "8 x 6 ft", "10 x 8 ft", "12 x 8 ft", "12 x 10 ft", "16 x 10 ft", "16 x 12 ft", "20 x 10 ft", "22 x 10 ft", "24 x 12 ft", "30 x 10 ft", "40 x 10 ft", "50 x 10 ft", "60 x 10 ft", "70 x 10 ft", "80 x 10 ft"};
 
      ListView lstv11;
      ArrayList<AshTable> array111;
@@ -61,6 +61,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
     }
 
     @Nullable
@@ -71,6 +72,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
 
 
+        getActivity().setTitle("Marketing");
         array111=new ArrayList<>();
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swiperefresh);
@@ -85,12 +87,22 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
 
 
+//
+//            // AishwaryaLED
+//        getActivity().runOnUiThread(  new Runnable() {
+//            @Override
+//            public void run() {
+//                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=12BMlJD76KCb3wTB8F3v08pKBEWnY4J-y21zSze-eeDg&sheet=BaseAshTable");
+//            }
+//        });
 
+
+//         AishwaryaLED_Dev
 
         getActivity().runOnUiThread(  new Runnable() {
             @Override
             public void run() {
-                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=1SZBaX3pruyv6whGBHh61Q-xB9-4yTyxikiz6KFKuhZM&sheet=BaseAshTable");
+                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=12BMlJD76KCb3wTB8F3v08pKBEWnY4J-y21zSze-eeDg&sheet=BaseAshTable");
             }
         });
 
@@ -106,12 +118,25 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
         array111.clear();
 
+//        // AishwaryaLED
+//        getActivity().runOnUiThread(  new Runnable() {
+//            @Override
+//            public void run() {
+//                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=12BMlJD76KCb3wTB8F3v08pKBEWnY4J-y21zSze-eeDg&sheet=BaseAshTable");
+//            }
+//        });
+
+
+//         AishwaryaLED_Dev
+
         getActivity().runOnUiThread(  new Runnable() {
             @Override
             public void run() {
-                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=1SZBaX3pruyv6whGBHh61Q-xB9-4yTyxikiz6KFKuhZM&sheet=BaseAshTable");
+                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=12BMlJD76KCb3wTB8F3v08pKBEWnY4J-y21zSze-eeDg&sheet=BaseAshTable");
             }
         });
+
+
     }
 
 
@@ -178,9 +203,9 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                     String test35 = prdobj.getString("Total_Amount_2");
                     String test36 = prdobj.getString("Advance_Amount");
                     String test37 = prdobj.getString("Credit_Period");
-                    String test38 = prdobj.getString("Photographer_Name");
-                    String test39 = prdobj.getString("Photographer_Mobile");
-                    String test40 = prdobj.getString("Photographer_Email");
+                    String test38 = prdobj.getString("Photographer_Details");
+                    String test39 = prdobj.getString("Video_Person_Details");
+                    String test40 = prdobj.getString("Stage_Sound_Light");
                     String test41 = prdobj.getString("Marketing_Person_Name");
                     String test42 = prdobj.getString("Remarks");
 
@@ -194,7 +219,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 e.printStackTrace();
             }
 
-            final CustomListViewAdapter adapter=new CustomListViewAdapter(getActivity(),R.layout.home_list_view, array111);
+            CustomListViewAdapter adapter=new CustomListViewAdapter(getActivity(),R.layout.home_list_view, array111);
             lstv11.setAdapter(adapter);
 
 
@@ -238,7 +263,6 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
             startActivity(intent);
 
         } else if (v == bt2) {
-
 
 
         }

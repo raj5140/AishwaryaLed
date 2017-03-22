@@ -2,9 +2,9 @@ package com.aisw.app.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.PixelFormat;
-import android.media.audiofx.BassBoost;
-import android.media.audiofx.Equalizer;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.Window;
@@ -12,6 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.aisw.app.R;
 import com.aisw.app.utils.CheckNetwork;
@@ -32,6 +33,15 @@ public class SplashActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
+        PackageInfo pInfo = null;
+        try {
+            pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        String verCode = pInfo.versionName;
+        TextView txtVer=(TextView)findViewById(R.id.textVersion);
+        txtVer.setText("Version "+verCode);
         if(CheckNetwork.isInternetAvailable(SplashActivity.this)){
             startAnimations();
 

@@ -1,35 +1,24 @@
 package com.aisw.app.activity;
 
-import android.content.Context;
-import android.content.Intent;
+
 import android.graphics.Color;
 import android.os.Build;
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aisw.app.R;
 import com.aisw.app.fragment.PagerAdapterrr;
-import com.aisw.app.fragment.Welcome_Slide1;
-import com.aisw.app.fragment.Welcome_Slide2;
-
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -52,7 +41,7 @@ public class Submit_form extends AppCompatActivity {
 
     String nameInput1,nameInput2,nameInput3,nameInput4,nameInput5,nameInput6,nameInput7, nameInput8,nameInput9,nameInput10,nameInput11,nameInput12,nameInput13,nameInput14,nameInput15,nameInput16,nameInput17,nameInput18,nameInput19,nameInput20,nameInput21,nameInput22,nameInput23, nameInput24, nameInput25, nameInput26, nameInput27, nameInput28, nameInput29, nameInput30, nameInput31, nameInput32, nameInput33,nameInput34,nameInput35,nameInput36,nameInput37,nameInput38,nameInput39,nameInput40,nameInput41;
 
-    EditText edtxt1,edtxt2,edtxt3,edtxt4,edtxt5,edtxt6,edtxt7,edtxt1a,edtext11,edtxt2a,edtext22,edtxt3a,edtext33,edtxt4a,edtext44,edtxt5a,edtext55,edtxt12,edtxt13,Board_Size,editText5a,editText5,editText6,editText7,radioButtonxxx,radioButton,editText13,editText13b,editText14,radioButton5,edtxt22,edtxt17,edtxt18,edtxt19,edtxt20,edtxt21,edtxt20x,edtxt21x,edtxt22x,edtxt23,edtxt24;
+    EditText edtxt1,edtxt2,edtxt3,edtxt4,edtxt5,edtxt6,edtxt7,edtxt1a,edtext11,edtxt2a,edtext22,edtxt3a,edtext33,edtxt4a,edtext44,edtxt5a,edtext55,edtxt12,edtxt13,Board_Size,editText5a,editText5,editText6,editText7,radioButtonxxx,radioButton,editText13,editText13b,editText14,radioButton5,edtxt22,edtxt17,edtxt18,edtxt19,edtxt20,edtxt21,editText1Invs,editText2Invs,editText3Invs,edtxt23,edtxt24;
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("https://docs.google.com/a/aishwaryaled.com/forms/d/e/")
@@ -63,14 +52,17 @@ public class Submit_form extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));
+
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
 
         // Making notification bar transparent
-        if (Build.VERSION.SDK_INT >= 21) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        }
+//        if (Build.VERSION.SDK_INT >= 21) {
+//            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+//        }
 
         setContentView(R.layout.activity_submit_form);
 
@@ -158,9 +150,9 @@ public class Submit_form extends AppCompatActivity {
                     edtxt19=(EditText)findViewById(R.id.edtxt19);
                     edtxt20=(EditText)findViewById(R.id.edtxt20);
                     edtxt21=(EditText)findViewById(R.id.edtxt21);
-                    edtxt20x=(EditText)findViewById(R.id.edtxt20x);
-                    edtxt21x=(EditText)findViewById(R.id.edtxt21x);
-                    edtxt22x=(EditText)findViewById(R.id.edtxt22x);
+                    editText1Invs=(EditText)findViewById(R.id.editText1Invs);
+                    editText2Invs=(EditText)findViewById(R.id.editText2Invs);
+                    editText3Invs=(EditText)findViewById(R.id.editText3Invs);
                     edtxt23=(EditText)findViewById(R.id.edtxt23);
                     edtxt24=(EditText)findViewById(R.id.edtxt24);
 
@@ -201,16 +193,16 @@ public class Submit_form extends AppCompatActivity {
                     nameInput34	=	edtxt19.getText().toString();
                     nameInput35	=	edtxt20.getText().toString();
                     nameInput36	=	edtxt21.getText().toString();
-                    nameInput37	=	edtxt20x.getText().toString();
-                    nameInput38	=	edtxt21x.getText().toString();
-                    nameInput39	=	edtxt22x.getText().toString();
+                    nameInput37	=	editText1Invs.getText().toString();
+                    nameInput38	=	editText2Invs.getText().toString();
+                    nameInput39	=	editText3Invs.getText().toString();
                     nameInput40	=	edtxt23.getText().toString();
                     nameInput41	=	edtxt24.getText().toString();
 
 
 
-                    Call<Void> completeQuestionnaireCall = spreadsheetWebService.completeQuestionnaire(nameInput1,nameInput2,nameInput3,nameInput4,nameInput5,nameInput6,nameInput7, nameInput8,nameInput9,nameInput10,nameInput11,nameInput12,nameInput13,nameInput14,nameInput15,nameInput16,nameInput17,nameInput18,nameInput19,nameInput20,nameInput21,nameInput22,nameInput23, nameInput24, nameInput25, nameInput26, nameInput27, nameInput28, nameInput29, nameInput30, nameInput31, nameInput32,nameInput33,nameInput34,nameInput35,nameInput36,nameInput37,nameInput38,nameInput39,nameInput40,nameInput41);
-                    completeQuestionnaireCall.enqueue(callCallback);
+//                    Call<Void> completeQuestionnaireCall = spreadsheetWebService.completeQuestionnaire(nameInput1,nameInput2,nameInput3,nameInput4,nameInput5,nameInput6,nameInput7, nameInput8,nameInput9,nameInput10,nameInput11,nameInput12,nameInput13,nameInput14,nameInput15,nameInput16,nameInput17,nameInput18,nameInput19,nameInput20,nameInput21,nameInput22,nameInput23, nameInput24, nameInput25, nameInput26, nameInput27, nameInput28, nameInput29, nameInput30, nameInput31, nameInput32,nameInput33,nameInput34,nameInput35,nameInput36,nameInput37,nameInput38,nameInput39,nameInput40,nameInput41);
+//                    completeQuestionnaireCall.enqueue(callCallback);
 
                     finish();
 
@@ -221,9 +213,10 @@ public class Submit_form extends AppCompatActivity {
 
 
         // making notification bar transparent
-        changeStatusBarColor();
+//        changeStatusBarColor();
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
@@ -300,51 +293,105 @@ public class Submit_form extends AppCompatActivity {
 
     public interface QuestionsSpreadsheetWebService {
 
-        @POST("1FAIpQLSeWOeprhdB9lEeO8TyKTnImWnyAcoRGty6X-WxQ08thqocrXg/formResponse")
-        @FormUrlEncoded
-        Call<Void> completeQuestionnaire(
-                @Field("entry.1904163707") String Company_Name1,
-                @Field("entry.1546431046") String Person_Name1,
-                @Field("entry.157511848") String Address1,
-                @Field("entry.1998032940") String Mail_ID1,
-                @Field("entry.1031705451") String Mobile_11,
-                @Field("entry.710547591") String Mobile_21,
-                @Field("entry.249623189") String Show_Name1,
-                @Field("entry.561188514") String Dispatch_Date1,
-                @Field("entry.1326603882") String Dispatch_Time1,
-                @Field("entry.1008414970") String Setup_Date1,
-                @Field("entry.2033044481") String Setup_Time1,
-                @Field("entry.131904756") String Show_Start_Date1,
-                @Field("entry.1270241177") String Show_Start_Time1,
-                @Field("entry.310227836") String Show_End_Date1,
-                @Field("entry.1559092619") String Show_End_Time1,
-                @Field("entry.839399087") String Dismantel_Date1,
-                @Field("entry.67200787") String Dismantel_Time1,
-                @Field("entry.1373965508") String Venu1,
-                @Field("entry.2066095847") String Venue_Address1,
-                @Field("entry.1288596102") String Stage_Height1,
-                @Field("entry.1841629465") String Board_Size1,
-                @Field("entry.2108316541") String Total_Panels1,
-                @Field("entry.1023285294") String Panels_Setup1,
-                @Field("entry.1799212699") String Total_Pixels1,
-                @Field("entry.957849475") String Spare1,
-                @Field("entry.1643744412") String Total_Signal_Loop1,
-                @Field("entry.538143366") String Total_Power_Loop1,
-                @Field("entry.1261200824") String Processor1,
-                @Field("entry.1772285500") String Laptop1,
-                @Field("entry.593065819") String Number_Of_Box1,
-                @Field("entry.1343221992") String Total_Amount1,
-                @Field("entry.2014047467") String Advance_Amount1,
-                @Field("entry.295780783") String Credit_Period1,
-                @Field("entry.177800233") String Transport1,
-                @Field("entry.590484574") String Photographer_Name1,
-                @Field("entry.2085495574") String Photographer_Mobile11,
-                @Field("entry.1425852692") String Photographer_Name_l1,
-                @Field("entry.1738232962") String Marketing_Person_Name1,
-                @Field("entry.1946067072") String Marketing_Person_Name2,
-                @Field("entry.881927960") String Marketing_Person_Name3,
-                @Field("entry.1824115693") String Marketing_Remarks1
-        );
+//        //                AishwaryaLED
+//
+//        @POST("1FAIpQLSdIMzi12lFzbRju8T21dxrEZ6lG9Iu47HU7fu66pRyUfBceVA/formResponse")
+//        @FormUrlEncoded
+//        Call<Void> completeQuestionnaire(
+//
+//                @Field("entry.1904163707") String Company_Name1,
+//                @Field("entry.1546431046") String Person_Name1,
+//                @Field("entry.157511848") String Address1,
+//                @Field("entry.1998032940") String Mail_ID1,
+//                @Field("entry.1031705451") String Mobile_11,
+//                @Field("entry.710547591") String Mobile_21,
+//                @Field("entry.249623189") String Show_Name1,
+//                @Field("entry.561188514") String Dispatch_Date1,
+//                @Field("entry.1326603882") String Dispatch_Time1,
+//                @Field("entry.1008414970") String Setup_Date1,
+//                @Field("entry.2033044481") String Setup_Time1,
+//                @Field("entry.131904756") String Show_Start_Date1,
+//                @Field("entry.1270241177") String Show_Start_Time1,
+//                @Field("entry.310227836") String Show_End_Date1,
+//                @Field("entry.1559092619") String Show_End_Time1,
+//                @Field("entry.839399087") String Dismantel_Date1,
+//                @Field("entry.67200787") String Dismantel_Time1,
+//                @Field("entry.1373965508") String Venu1,
+//                @Field("entry.2066095847") String Venue_Address1,
+//                @Field("entry.1288596102") String Stage_Height1,
+//                @Field("entry.1841629465") String Board_Size1,
+//                @Field("entry.2108316541") String Total_Panels1,
+//                @Field("entry.1023285294") String Panels_Setup1,
+//                @Field("entry.1799212699") String Total_Pixels1,
+//                @Field("entry.957849475") String Spare1,
+//                @Field("entry.1643744412") String Total_Signal_Loop1,
+//                @Field("entry.538143366") String Total_Power_Loop1,
+//                @Field("entry.1261200824") String Processor1,
+//                @Field("entry.1772285500") String Laptop1,
+//                @Field("entry.593065819") String Number_Of_Box1,
+//                @Field("entry.1343221992") String Total_Amount1,
+//                @Field("entry.2014047467") String Advance_Amount1,
+//                @Field("entry.295780783") String Credit_Period1,
+//                @Field("entry.177800233") String Transport1,
+//                @Field("entry.590484574") String Photographer_Name1,
+//                @Field("entry.2085495574") String Photographer_Mobile11,
+//                @Field("entry.1425852692") String Photographer_Name_l1,
+//                @Field("entry.1738232962") String Marketing_Person_Name1,
+//                @Field("entry.1946067072") String Marketing_Person_Name2,
+//                @Field("entry.881927960") String Marketing_Person_Name3,
+//                @Field("entry.1824115693") String Marketing_Remarks1
+//
+//        );
+
+        //                AishwaryaLED_DEV
+
+//        @POST("1FAIpQLSeWOeprhdB9lEeO8TyKTnImWnyAcoRGty6X-WxQ08thqocrXg/formResponse")
+//        @FormUrlEncoded
+//        Call<Void> completeQuestionnaire(
+//
+//                @Field("entry.1904163707") String Company_Name1,
+//                @Field("entry.1546431046") String Person_Name1,
+//                @Field("entry.157511848") String Address1,
+//                @Field("entry.1998032940") String Mail_ID1,
+//                @Field("entry.1031705451") String Mobile_11,
+//                @Field("entry.710547591") String Mobile_21,
+//                @Field("entry.249623189") String Show_Name1,
+//                @Field("entry.561188514") String Dispatch_Date1,
+//                @Field("entry.1326603882") String Dispatch_Time1,
+//                @Field("entry.1008414970") String Setup_Date1,
+//                @Field("entry.2033044481") String Setup_Time1,
+//                @Field("entry.131904756") String Show_Start_Date1,
+//                @Field("entry.1270241177") String Show_Start_Time1,
+//                @Field("entry.310227836") String Show_End_Date1,
+//                @Field("entry.1559092619") String Show_End_Time1,
+//                @Field("entry.839399087") String Dismantel_Date1,
+//                @Field("entry.67200787") String Dismantel_Time1,
+//                @Field("entry.1373965508") String Venu1,
+//                @Field("entry.2066095847") String Venue_Address1,
+//                @Field("entry.1288596102") String Stage_Height1,
+//                @Field("entry.1841629465") String Board_Size1,
+//                @Field("entry.2108316541") String Total_Panels1,
+//                @Field("entry.1023285294") String Panels_Setup1,
+//                @Field("entry.1799212699") String Total_Pixels1,
+//                @Field("entry.957849475") String Spare1,
+//                @Field("entry.1643744412") String Total_Signal_Loop1,
+//                @Field("entry.538143366") String Total_Power_Loop1,
+//                @Field("entry.1261200824") String Processor1,
+//                @Field("entry.1772285500") String Laptop1,
+//                @Field("entry.593065819") String Number_Of_Box1,
+//                @Field("entry.1343221992") String Total_Amount1,
+//                @Field("entry.2014047467") String Advance_Amount1,
+//                @Field("entry.295780783") String Credit_Period1,
+//                @Field("entry.177800233") String Transport1,
+//                @Field("entry.590484574") String Photographer_Name1,
+//                @Field("entry.2085495574") String Photographer_Mobile11,
+//                @Field("entry.1425852692") String Photographer_Name_l1,
+//                @Field("entry.1738232962") String Marketing_Person_Name1,
+//                @Field("entry.1946067072") String Marketing_Person_Name2,
+//                @Field("entry.881927960") String Marketing_Person_Name3,
+//                @Field("entry.1824115693") String Marketing_Remarks1
+//
+//        );
     }
 
 

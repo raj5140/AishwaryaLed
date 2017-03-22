@@ -53,6 +53,8 @@ public class Welcome_Slide2 extends Fragment {
 
     View view;
 
+    String eE;
+
 
     ImageButton plusbtn;
     LinearLayout linearBelowBoard;
@@ -563,6 +565,7 @@ public class Welcome_Slide2 extends Fragment {
 
 
         grossAmount.addTextChangedListener(new TextWatcher() {
+
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -587,22 +590,27 @@ public class Welcome_Slide2 extends Fragment {
     private void showDispatchCalendar() {
         Calendar c1 = Calendar.getInstance();
         DatePickerDialog da = new DatePickerDialog(getActivity(), mDateSetListener, sYearIni, sMonthIni, sDayIni);
-        c1.add(DATE, 1);
+        c1.add(DATE, 0);
         Date newDate = c1.getTime();
         da.getDatePicker().setMinDate(newDate.getTime());
+//        long newDate = System.currentTimeMillis();
+//        da.getDatePicker().setMinDate(newDate);
         da.show();
+
     }
 
     private void showStartCalendar() {
+
         Calendar c2 = Calendar.getInstance();
         DatePickerDialog da1 = new DatePickerDialog(getActivity(), sDateSetListener, mYearIni, mMonthIni, mDayIni);
         c2.set(YEAR, mYearIni);
         c2.set(MONTH, mMonthIni);
         c2.set(DAY_OF_MONTH, mDayIni);
-        c2.add(DATE, 1);
+        c2.add(DATE, 0);
         Date newDate1 = c2.getTime();
         da1.getDatePicker().setMinDate(newDate1.getTime());
         da1.show();
+
     }
 
     private DatePickerDialog.OnDateSetListener sDateSetListener =
@@ -638,6 +646,7 @@ public class Welcome_Slide2 extends Fragment {
     }
 
     private void colocar_fecha1() {
+
         day2 = sDayIni;
         month2 = sMonthIni + 1;
         year2 = sYearIni;
@@ -657,7 +666,7 @@ public class Welcome_Slide2 extends Fragment {
         c3.set(YEAR, sYearIni);
         c3.set(MONTH, sMonthIni);
         c3.set(DAY_OF_MONTH, sDayIni);
-        c3.add(DATE, 1);
+        c3.add(DATE, 0);
         Date newDate2 = c3.getTime();
         da2.getDatePicker().setMinDate(newDate2.getTime());
         da2.show();
@@ -695,7 +704,7 @@ public class Welcome_Slide2 extends Fragment {
         c4.set(YEAR, mYearIni1);
         c4.set(MONTH, mMonthIni1);
         c4.set(DAY_OF_MONTH, mDayIni1);
-        c4.add(DATE, 1);
+        c4.add(DATE, 0);
         Date newDate3 = c4.getTime();
         da3.getDatePicker().setMinDate(newDate3.getTime());
         da3.show();
@@ -730,7 +739,7 @@ public class Welcome_Slide2 extends Fragment {
         c5.set(YEAR, sYearIni2);
         c5.set(MONTH, sMonthIni2);
         c5.set(DAY_OF_MONTH, sDayIni2);
-        c5.add(DATE, 1);
+        c5.add(DATE, 0);
         Date newDate4 = c5.getTime();
         da4.getDatePicker().setMinDate(newDate4.getTime());
         da4.show();
@@ -759,19 +768,18 @@ public class Welcome_Slide2 extends Fragment {
 
     public void dateCheck() {
 
-        if (day1 > day2 || month1 > month2 || year1 > year2) {
-            if (year1 + month1 + day1 >= year2 + month2 + day2) {
-                Toast.makeText(getContext(), "From-Date Should not be greater than To-Date", Toast.LENGTH_LONG).show();
-                System.out.println("::::::::inside date check");
-                edtxt2a.setError("From-Date Should not be greater than To-Date");
-
-            } else {
-
-            }
-        } else {
-            edtxt2a.setError(null);
-
-        }
+//        if (day1 >= day2 || month1 >= month2 || year1 >= year2) {
+//            if (year1 + month1 + day1 >= year2 + month2 + day2) {
+//                Toast.makeText(getContext(), "From-Date Should not be greater than To-Date", Toast.LENGTH_LONG).show();
+//                edtxt2a.setError("From-Date Should not be greater than To-Date");
+//
+//            } else {
+//
+//            }
+//        } else {
+//            edtxt2a.setError(null);
+//
+//        }
     }
 
 
@@ -905,7 +913,10 @@ public class Welcome_Slide2 extends Fragment {
     public void plusAction() {
 
 
+
+
         try {
+            eE="";
             editTextInv.setSingleLine(false);
             for (int i = 0; i < linearBelowBoard.getChildCount(); i++) {
                 EditText editTett = getEditTextFromPosition(i);
@@ -914,33 +925,16 @@ public class Welcome_Slide2 extends Fragment {
 
                 String widthii = widthi.getText().toString();
 
-                ArrayList<String> array1 = new ArrayList<>();
-                array1.add(str);
-                Log.d(LOG_TAG, "plusAction>>>>>>: " + array1.toString());
+                editTextInv.setText("Board Size : "+widthi.getText().toString()+" X "+height.getText().toString()+" = "+zerotextView.getText().toString()+"\n No. of Boards : "+boardNum.getText().toString()+" = "+totalCst.getText().toString()+"(Total Sqft)"+"\n Days : "+noOfDaysEdt.getText().toString()+" = "+noOfDaysTotal.getText().toString()+"(in sqft)");
 
-                editTextInv.setText(array1.toString());
+                eE= eE+"\n \n"+"Board Size : "+widthi.getText().toString()+" X "+height.getText().toString()+" = "+zerotextView.getText().toString()+"\n No. of Boards : "+boardNum.getText().toString()+" = "+totalCst.getText().toString()+"(Total Sqft)"+"\n Days : "+noOfDaysEdt.getText().toString()+" = "+noOfDaysTotal.getText().toString()+"(in sqft)";
 
 
 
-//
-//                ArrayList<String> array1 = new ArrayList<>();
-//
-//                array1.add(str);
-
-//                Log.d(LOG_TAG, "plusAction>>>>>>: " + array1.toString());
-//                for(int z=0; z < aWidth.length;z++)
-//                {
-//                    aWidth[z]=widthi.getText().toString();
-//                    Log.d(LOG_TAG, "plusAction111111: "+ aWidth[z].indexOf(0)+">>>>>"+aWidth[z].toString());
-//                }
-
-
-//                editTextInv.setText("total days :" +str +"  width"+widthii+"  ");
-
-
-                    Log.d(LOG_TAG, "plusAction: " + "total days : " + str + "         width " + widthii);
+                Log.d(LOG_TAG, "plusAction: " + "total days : " + str + "         width " + widthii);
 
                 }
+            editTextInv.setText(eE);
 //            editTextInv.setText("Board Size : "+widthii.getText().toString()+" X "+height.getText().toString()+" = "+zerotextView.getText().toString()+"\n No. of Boards : "+boardNum.getText().toString()+" = "+totalCst.getText().toString()+"(Total Sqft)"+"\n Days : "+noOfDaysEdt.getText().toString()+" = "+noOfDaysTotal.getText().toString()+"(in sqft)");
             }catch (Exception e){
 
@@ -1182,9 +1176,6 @@ public class Welcome_Slide2 extends Fragment {
         }
 
     }
-
-
-
 
 }
 
