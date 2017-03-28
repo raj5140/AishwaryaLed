@@ -28,6 +28,17 @@
         android:layout_toRightOf="@+id/txtVw7"
         android:layout_width="match_parent"
         android:layout_height="30dp" />
+    <ImageButton
+        android:id="@+id/imgContBut1"
+        android:src="@drawable/plusas"
+        android:paddingRight="15dp"
+        android:layout_alignTop="@+id/edtxt5"
+        android:layout_alignBottom="@+id/edtxt5"
+        android:layout_alignRight="@+id/edtxt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" />
+
 
     <EditText
         android:id="@+id/edtxt6"
@@ -43,6 +54,16 @@
         android:layout_width="match_parent"
         android:layout_height="30dp" />
 
+    <ImageButton
+        android:id="@+id/imgContBut2"
+        android:src="@drawable/plusas"
+        android:paddingRight="15dp"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/edtxt6"
+        android:layout_alignBottom="@+id/edtxt6"
+        android:layout_alignRight="@+id/edtxt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/txtVw7"
         android:text="Mobile Number"

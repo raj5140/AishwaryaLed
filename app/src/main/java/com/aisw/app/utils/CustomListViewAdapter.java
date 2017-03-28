@@ -3,116 +3,118 @@ package com.aisw.app.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.aisw.app.R;
 import com.aisw.app.activity.Full_info_page;
-import com.aisw.app.activity.Login_Page;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 
-public class CustomListViewAdapter extends ArrayAdapter<AshTable> {
+public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Filterable {
 
-
-    ArrayList<AshTable> prod;
+    private static final String LOG_TAG = "CustomViewAdapter";
+    private ArrayList<AshTable> wholeList = new ArrayList<>();
+    private ArrayList<AshTable> currentList;
     Context context;
     int resource;
+
 
     public CustomListViewAdapter(Context context, int resource, ArrayList<AshTable> prod) {
         super(context, resource, prod);
 
-        this.context=context;
-        this.resource=resource;
-        this.prod=prod;
+        this.context = context;
+        this.resource = resource;
+        this.currentList = prod;
+
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
+    public View getView(int position, View convertView, ViewGroup parent) {
 
-        if(convertView==null){
+        if (convertView == null) {
 
-            LayoutInflater layoutInflater=(LayoutInflater)getContext().getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
 
-            convertView=layoutInflater.inflate(R.layout.list_view,null,true);
+            convertView = layoutInflater.inflate(R.layout.list_view, null, true);
         }
 
-        AshTable pro=getItem(position);
+        AshTable pro = getItem(position);
 
-        final	String	st1=pro.getCompname();
-        final	String	st2=pro.getPersonname();
-        final	String	st3=pro.getAddress();
-        final	String	st4=pro.getMailid();
-        final	String	st5=pro.getMob1();
-        final	String	st6=pro.getMob2();
-        final	String	st7=pro.getShowname();
-        final	String	st8=pro.getDispatchdate();
-        final	String	st9=pro.getDispatchtime();
-        final	String	st10=pro.getStatedate();
-        final	String	st11=pro.getStarttime();
-        final	String	st12=pro.getSetupdate();
-        final	String	st13=pro.getSetuptime();
-        final	String	st14=pro.getEnddate();
-        final	String	st15=pro.getEndtime();
-        final	String	st16=pro.getDismanteldate();
-        final	String	st17=pro.getDismanteltime();
-        final	String	st18=pro.getVenu();
-        final	String	st19=pro.getVenuaddress();
-        final	String	st20=pro.getBoardsize();
-        final	String	st21=pro.getOverallsqft();
-        final	String	st22=pro.getRatepersqft();
-        final	String	st23=pro.getTotalamt();
-        final	String	st24=pro.getTransport();
-        final	String	st25=pro.getStage();
-        final	String	st26=pro.getPower();
-        final	String	st27=pro.getOthercost1();
-        final	String	st28=pro.getOthercost2();
-        final	String	st29=pro.getGrossamt();
-        final	String	st30=pro.getBillrequired();
-        final	String	st31=pro.getBillinnameof();
-        final	String	st32=pro.getServicetax();
-        final	String	st33=pro.getTotalamt2();
-        final	String	st34=pro.getAdvanceamt();
-        final	String	st35=pro.getCreditperiod();
-        final	String	st36=pro.getPhotoname();
-        final	String	st37=pro.getPhotomob();
-        final	String	st38=pro.getPhotoemail();
-        final	String	st39=pro.getMarketingname();
-        final	String	st40=pro.getRemark();
+        final String st1 = pro.getCompname();
+        final String st2 = pro.getPersonname();
+        final String st3 = pro.getAddress();
+        final String st4 = pro.getMailid();
+        final String st5 = pro.getMob1();
+        final String st6 = pro.getMob2();
+        final String st7 = pro.getShowname();
+        final String st8 = pro.getDispatchdate();
+        final String st9 = pro.getDispatchtime();
+        final String st10 = pro.getStatedate();
+        final String st11 = pro.getStarttime();
+        final String st12 = pro.getSetupdate();
+        final String st13 = pro.getSetuptime();
+        final String st14 = pro.getEnddate();
+        final String st15 = pro.getEndtime();
+        final String st16 = pro.getDismanteldate();
+        final String st17 = pro.getDismanteltime();
+        final String st18 = pro.getVenu();
+        final String st19 = pro.getVenuaddress();
+        final String st20 = pro.getBoardsize();
+        final String st21 = pro.getOverallsqft();
+        final String st22 = pro.getRatepersqft();
+        final String st23 = pro.getTotalamt();
+        final String st24 = pro.getTransport();
+        final String st25 = pro.getStage();
+        final String st26 = pro.getPower();
+        final String st27 = pro.getOthercost1();
+        final String st28 = pro.getOthercost2();
+        final String st29 = pro.getGrossamt();
+        final String st30 = pro.getBillrequired();
+        final String st31 = pro.getBillinnameof();
+        final String st32 = pro.getServicetax();
+        final String st33 = pro.getTotalamt2();
+        final String st34 = pro.getAdvanceamt();
+        final String st35 = pro.getCreditperiod();
+        final String st36 = pro.getPhotoname();
+        final String st37 = pro.getPhotomob();
+        final String st38 = pro.getPhotoemail();
+        final String st39 = pro.getMarketingname();
+        final String st40 = pro.getRemark();
 
 
-
-        TextView txt1=(TextView)convertView.findViewById(R.id.textView11);
+        TextView txt1 = (TextView) convertView.findViewById(R.id.textView11);
         txt1.setText(pro.getPersonname());
 
-        TextView txt2=(TextView)convertView.findViewById(R.id.textView22);
+        TextView txt2 = (TextView) convertView.findViewById(R.id.textView22);
         txt2.setText(pro.getMob1());
 
-        TextView txt3=(TextView)convertView.findViewById(R.id.textView33);
+        TextView txt3 = (TextView) convertView.findViewById(R.id.textView33);
         txt3.setText(pro.getShowname());
 
-        TextView txt5=(TextView)convertView.findViewById(R.id.textView44);
+        TextView txt5 = (TextView) convertView.findViewById(R.id.textView44);
         txt5.setText(pro.getStatedate());
 
-        TextView txt4=(TextView)convertView.findViewById(R.id.textView6);
+        TextView txt4 = (TextView) convertView.findViewById(R.id.textView6);
         txt4.setText(pro.getEnddate());
 
-        TextView txt6=(TextView)convertView.findViewById(R.id.textView55);
+        TextView txt6 = (TextView) convertView.findViewById(R.id.textView55);
         txt6.setText(pro.getBoardsize());
 
-        TextView txt7=(TextView)convertView.findViewById(R.id.teextView);
-        txt7.setText("( "+pro.getCompname()+" )");
+        TextView txt7 = (TextView) convertView.findViewById(R.id.teextView);
+        txt7.setText("( " + pro.getCompname() + " )");
 
 
-
-        Button imgb=(Button) convertView.findViewById(R.id.imageButton2);
+        Button imgb = (Button) convertView.findViewById(R.id.imageButton2);
         imgb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -166,5 +168,28 @@ public class CustomListViewAdapter extends ArrayAdapter<AshTable> {
         });
 
         return convertView;
+    }
+
+    public void filter(String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+
+        currentList.clear();
+        if (charText.length() == 0) {
+            currentList.addAll(wholeList);
+        } else {
+            for (AshTable pro : wholeList) {
+                Log.d(LOG_TAG, "filter: 2 searching " + charText + " in " + pro.getStatedate());
+                if (pro.getStatedate().toLowerCase().contains(charText)) {
+                    Log.d(LOG_TAG, "filter: found " + pro.getStatedate());
+                    currentList.add(pro);
+                }
+            }
+            notifyDataSetChanged();
+        }
+
+    }
+
+    public void setWholeList(ArrayList<AshTable> list) {
+        wholeList.addAll(list);
     }
 }

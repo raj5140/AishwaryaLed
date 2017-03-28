@@ -121,7 +121,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Mail_ID"
+                android:text="Mail ID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -152,7 +152,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Mobile_1"
+                android:text="Mobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -183,7 +183,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Mobile_2"
+                android:text="Alt Mobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -214,7 +214,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Show_Name"
+                android:text="Show Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -245,7 +245,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Dispatch_Date"
+                android:text="Dispatch Date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -276,7 +276,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Dispatch_Time"
+                android:text="Dispatch Time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -307,7 +307,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Start_Date"
+                android:text="Start Date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -338,7 +338,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Start_Time"
+                android:text="Start Time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -369,7 +369,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Setup_Date"
+                android:text="Setup Date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -400,7 +400,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Setup_Time"
+                android:text="Setup Time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -431,7 +431,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Show_Start_Date"
+                android:text="Show Start Date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -462,7 +462,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Show_Start_Time"
+                android:text="Show Start Time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -493,7 +493,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Dismantel_Date"
+                android:text="Dismantel Date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -524,7 +524,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Dismantel_Time"
+                android:text="Dismantel Time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -586,7 +586,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Venue_Address"
+                android:text="Venue Address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -619,7 +619,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Board_Size"
+                android:text="Board Size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -650,7 +650,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Overall_sqft"
+                android:text="Overall sqft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -681,7 +681,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Rate_Per_Sqft"
+                android:text="Rate Per Sqft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -710,7 +710,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Total_Amount"
+                android:text="Total Amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -826,7 +826,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Other_Costs_1"
+                android:text="Other Costs 1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -855,7 +855,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Other_Cost_2"
+                android:text="Other Cost 2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -884,7 +884,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Gross_Amount"
+                android:text="Gross Amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -912,7 +912,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Bill_Required"
+                android:text="Bill Required"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -940,7 +940,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Billing_In_Name_Of"
+                android:text="Billing In Name Of"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -968,7 +968,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Service_Tax"
+                android:text="Service Tax"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -996,7 +996,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Total_Amount_2"
+                android:text="Total Amount 2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -1024,7 +1024,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Advance_Amount"
+                android:text="Advance Amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -1052,7 +1052,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Credit_Period"
+                android:text="Credit Period"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -1080,7 +1080,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Photographer_Name"
+                android:text="Photographer Details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -1108,7 +1108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Photographer_Mobile"
+                android:text="Video Person Details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -1136,7 +1136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Photographer_Email"
+                android:text="Stage, Sound and Light"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -1163,8 +1163,9 @@
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <TextView
-                android:text="Marketing_Person_Name"
+                android:text="Marketing Person Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"

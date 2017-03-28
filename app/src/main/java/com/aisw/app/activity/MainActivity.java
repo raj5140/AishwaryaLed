@@ -6,10 +6,6 @@ import android.os.Bundle;
 
 import com.aisw.app.R;
 
-/**
- * Created by varun on 2/10/2017.
- */
-
 public class MainActivity extends Activity {
 
     @Override
@@ -17,7 +13,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
 
-        Intent i = new Intent(this,NavActivity.class);
+        Intent i = new Intent(this,LoginActivity.class);
         startActivity(i);
         finish();
     }
