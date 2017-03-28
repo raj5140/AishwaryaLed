@@ -1,0 +1,31 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <EditText android:id="@+id/inputSearch1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:drawableEnd="@drawable/calendar_icon"
+        android:focusable="false"
+        android:paddingRight="15dp"
+        android:inputType="textVisiblePassword"/>
+
+
+        <ListView
+            android:id="@+id/lst_vw2"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inputSearch1"
+            android:layout_above="@id/but_add">
+
+        </ListView>
+
+
+</RelativeLayout>
