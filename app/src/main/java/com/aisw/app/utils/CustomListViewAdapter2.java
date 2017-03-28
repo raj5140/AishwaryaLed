@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.aisw.app.R;
@@ -20,16 +21,17 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 
-public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Filterable {
+public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements Filterable {
 
-    private static final String LOG_TAG = "CustomViewAdapter";
-    private ArrayList<AshTable> wholeList = new ArrayList<>();
-    private ArrayList<AshTable> currentList;
+    private static final String LOG_TAG = "CustomViewAdapter2";
+    private ArrayList<AshTable2> wholeList = new ArrayList<>();
+    private ArrayList<AshTable2> currentList;
     Context context;
     int resource;
 
 
-    public CustomListViewAdapter(Context context, int resource, ArrayList<AshTable> prod) {
+
+    public CustomListViewAdapter2(Context context, int resource, ArrayList<AshTable2> prod) {
         super(context, resource, prod);
 
         this.context = context;
@@ -48,7 +50,7 @@ public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Fil
             convertView = layoutInflater.inflate(R.layout.list_view, null, true);
         }
 
-        AshTable pro = getItem(position);
+        AshTable2 pro = getItem(position);
 
         final String st1 = pro.getCompname();
         final String st2 = pro.getPersonname();
@@ -171,13 +173,17 @@ public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Fil
     }
 
     public void filter(String charText) {
-        charText = charText.toLowerCase(Locale.getDefault());
 
+        charText = charText.toLowerCase(Locale.getDefault());
         currentList.clear();
+
         if (charText.length() == 0) {
+
             currentList.addAll(wholeList);
+            currentList.clear();
+
         } else {
-            for (AshTable pro : wholeList) {
+            for (AshTable2 pro : wholeList) {
                 Log.d(LOG_TAG, "filter: 2 searching " + charText + " in " + pro.getStatedate());
                 if (pro.getStatedate().toLowerCase().contains(charText)) {
                     Log.d(LOG_TAG, "filter: found " + pro.getStatedate());
@@ -189,7 +195,7 @@ public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Fil
 
     }
 
-    public void setWholeList(ArrayList<AshTable> list) {
+    public void setWholeList(ArrayList<AshTable2> list) {
         wholeList.addAll(list);
     }
 }
