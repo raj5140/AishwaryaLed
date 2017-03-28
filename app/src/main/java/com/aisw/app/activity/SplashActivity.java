@@ -1,20 +1,17 @@
 package com.aisw.app.activity;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.graphics.PixelFormat;
+import android.media.audiofx.BassBoost;
+import android.media.audiofx.Equalizer;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v7.app.AlertDialog;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.aisw.app.R;
 import com.aisw.app.utils.CheckNetwork;
@@ -35,44 +32,12 @@ public class SplashActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
-
-        PackageInfo pInfo = null;
-        try {
-            pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        String verCode = pInfo.versionName;
-        TextView txtVer=(TextView)findViewById(R.id.textVersion);
-        txtVer.setText("Version "+verCode);
-
-
         if(CheckNetwork.isInternetAvailable(SplashActivity.this)){
             startAnimations();
 
         }else {
-
-            netCheck();
-
+            startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
         }
-
-    }
-
-    public void netCheck() {
-
-
-        new AlertDialog.Builder(this)
-                .setTitle("No Internet Connection")
-                .setMessage("Uh Oh! Looks like your connection is not turned on. Please try again later!")
-                .setNegativeButton(android.R.string.no, null)
-                .setPositiveButton("OPEN SETTINGS", new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
-                        finish();
-                    }
-                }).create().show();
-
 
     }
     private void startAnimations() {
@@ -119,6 +84,5 @@ public class SplashActivity extends Activity {
         splashTread.start();
 
     }
-
 
 }
