@@ -1,5 +1,6 @@
 package com.aisw.app.fragment;
 
+import android.app.LocalActivityManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -8,7 +9,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTabHost;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.ActionBar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,13 +21,17 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
 import com.aisw.app.R;
 import com.aisw.app.activity.Full_info_page;
+import com.aisw.app.activity.MainActivity;
 import com.aisw.app.activity.Submit_form;
 import com.aisw.app.utils.AshTable;
 import com.aisw.app.utils.CustomHomeAdapter;
@@ -37,18 +46,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.sql.Time;
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
-public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
+import java.util.ArrayList;
+import java.util.Locale;
+
+
+public class HomeFragment extends Fragment implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
 
 //    ProgressDialog pd;
 //    private  String[] board_size = {"Select Your Size", "8 x 6 ft", "10 x 8 ft", "12 x 8 ft", "12 x 10 ft", "16 x 10 ft", "16 x 12 ft", "20 x 10 ft", "22 x 10 ft", "24 x 12 ft", "30 x 10 ft", "40 x 10 ft", "50 x 10 ft", "60 x 10 ft", "70 x 10 ft", "80 x 10 ft"};
 
-     ListView lstv11;
-     ArrayList<AshTable> array111;
+//    TabHost tabHost;
+
+    ListView lstv11;
+    ArrayList<AshTable> array111;
 
 
     SwipeRefreshLayout mSwipeRefreshLayout;
@@ -56,10 +67,14 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     private Button bt1;
     private Button bt2;
 
+    EditText inputSearch;
+    CustomListViewAdapter adapter;
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
     }
 
@@ -70,42 +85,40 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 container, false);
 
 
-
-        array111=new ArrayList<>();
+        getActivity().setTitle("Marketing");
+        array111 = new ArrayList<>();
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swiperefresh);
         mSwipeRefreshLayout.setOnRefreshListener(this);
 
 
-        lstv11=(ListView)view.findViewById(R.id.lst_vw1);
+        lstv11 = (ListView) view.findViewById(R.id.lst_vw1);
 
         bt1 = (Button) view.findViewById(R.id.but_add);
         bt1.setOnClickListener(this);
 
 
-
-
-
-            // AishwaryaLED
-        getActivity().runOnUiThread(  new Runnable() {
-            @Override
-            public void run() {
-                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=1SZBaX3pruyv6whGBHh61Q-xB9-4yTyxikiz6KFKuhZM&sheet=BaseAshTable");
-            }
-        });
-
-
-//        // AishwaryaLED_Dev
 //
+//            // AishwaryaLED
 //        getActivity().runOnUiThread(  new Runnable() {
 //            @Override
 //            public void run() {
 //                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=12BMlJD76KCb3wTB8F3v08pKBEWnY4J-y21zSze-eeDg&sheet=BaseAshTable");
 //            }
 //        });
-//
-//
-//
+
+
+//         AishwaryaLED_Dev
+
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=12BMlJD76KCb3wTB8F3v08pKBEWnY4J-y21zSze-eeDg&sheet=BaseAshTable");
+            }
+        });
+
+
+//        return mTabHost;
         return view;
 
 
@@ -117,27 +130,28 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         array111.clear();
 
 //        // AishwaryaLED
-        getActivity().runOnUiThread(  new Runnable() {
-            @Override
-            public void run() {
-                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=1SZBaX3pruyv6whGBHh61Q-xB9-4yTyxikiz6KFKuhZM&sheet=BaseAshTable");
-            }
-        });
-
-
-////         AishwaryaLED_Dev
-//
 //        getActivity().runOnUiThread(  new Runnable() {
 //            @Override
 //            public void run() {
 //                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=12BMlJD76KCb3wTB8F3v08pKBEWnY4J-y21zSze-eeDg&sheet=BaseAshTable");
 //            }
 //        });
+
+
+//         AishwaryaLED_Dev
+
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                new HomeFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=12BMlJD76KCb3wTB8F3v08pKBEWnY4J-y21zSze-eeDg&sheet=BaseAshTable");
+            }
+        });
+
+
     }
 
 
-    public class ReadJSON extends AsyncTask<String,Integer,String> {
-
+    public class ReadJSON extends AsyncTask<String, Integer, String> {
 
 
         @Override
@@ -152,19 +166,19 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
 
         @Override
-        protected void onPostExecute(String content){
+        protected void onPostExecute(String content) {
 
             try {
 
-                JSONObject jsonObject=new JSONObject(content);
-                JSONArray jsonArray=jsonObject.getJSONArray("BaseAshTable");
+                JSONObject jsonObject = new JSONObject(content);
+                JSONArray jsonArray = jsonObject.getJSONArray("BaseAshTable");
 
-                for(int i=0;i<jsonArray.length();i++){
+                for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject prdobj = jsonArray.getJSONObject(i);
 
                     String test1 = prdobj.getString("Timestamp");
                     String test2 = prdobj.getString("Company_Name");
-                    String test3= prdobj.getString("Person_Name");
+                    String test3 = prdobj.getString("Person_Name");
                     String test4 = prdobj.getString("Address");
                     String test5 = prdobj.getString("Mail_ID");
                     String test6 = prdobj.getString("Mobile_1");
@@ -206,8 +220,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                     String test42 = prdobj.getString("Remarks");
 
 
-                    array111.add(new AshTable(test1, test2, test3, test4, test5, test6, test7, test8, test9, test10, test11, test12, test13, test14, test15, test16, test17, test18, test19, test20, test21, test22, test23, test24, test25, test26, test27, test28, test29, test30, test31, test32, test33, test34,test35,test36,test37,test38,test39,test40,test41,test42));
-
+                    array111.add(new AshTable(test1, test2, test3, test4, test5, test6, test7, test8, test9, test10, test11, test12, test13, test14, test15, test16, test17, test18, test19, test20, test21, test22, test23, test24, test25, test26, test27, test28, test29, test30, test31, test32, test33, test34, test35, test36, test37, test38, test39, test40, test41, test42));
                 }
 
 
@@ -215,7 +228,7 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 e.printStackTrace();
             }
 
-            final CustomListViewAdapter adapter=new CustomListViewAdapter(getActivity(),R.layout.home_list_view, array111);
+            final CustomListViewAdapter adapter = new CustomListViewAdapter(getActivity(), R.layout.home_list_view, array111);
             lstv11.setAdapter(adapter);
 
 
@@ -224,8 +237,6 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         }
 
     }
-
-
 
 
     private static String readURL(String theUrl) {
@@ -255,17 +266,32 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
 
         if (v == bt1) {
 //            showLoginDialog1();
-            Intent intent=new Intent(getActivity(),Submit_form.class);
+            Intent intent = new Intent(getActivity(), Submit_form.class);
             startActivity(intent);
 
         } else if (v == bt2) {
-
 
 
         }
 
 
     }
+
+    @Override
+    public void onResume() {
+//        Log.e("DEBUG", "onResume of LoginFragment");
+        onRefresh();
+        super.onResume();
+    }
+
+
+
+    @Override
+    public void onPause() {
+//        Log.e("DEBUG", "OnPause of loginFragment");
+        super.onPause();
+    }
+
 
 }
 

@@ -4,7 +4,7 @@ package com.aisw.app.utils;
  * Created by Rajiv_Lapy on 16-02-2017.
  */
 
-public class AshTable {
+public class AshTable2 {
 
 
     private String 	timestamp;
@@ -53,7 +53,7 @@ public class AshTable {
 
 
 
-    public AshTable (String timestamp,String compname,String personname,String	address,String mailid,String mob1,String mob2,String showname,String dispatchdate,String dispatchtime,String setupdate,String setuptime,String startdate,String	starttime,String enddate,String	endtime,String dismanteldate,String	dismanteltime,String venu,String venuaddress,String	boardsize,String overallsqft,String	ratepersqft,String	totalamt,String	transport,String stage,String power,String othercost1,String othercost2,String grossamt,String billrequired,String compname2,String	billinnameof,String	servicetax,String totalamt2,String advanceamt,String creditperiod,String photoname,String photomob,String photoemail,String	marketingname,String remark){
+    public AshTable2 (String timestamp,String compname,String personname,String	address,String mailid,String mob1,String mob2,String showname,String dispatchdate,String dispatchtime,String setupdate,String setuptime,String startdate,String	starttime,String enddate,String	endtime,String dismanteldate,String	dismanteltime,String venu,String venuaddress,String	boardsize,String overallsqft,String	ratepersqft,String	totalamt,String	transport,String stage,String power,String othercost1,String othercost2,String grossamt,String billrequired,String compname2,String	billinnameof,String	servicetax,String totalamt2,String advanceamt,String creditperiod,String photoname,String photomob,String photoemail,String	marketingname,String remark){
 
         this.timestamp=timestamp;
         this.compname=compname;

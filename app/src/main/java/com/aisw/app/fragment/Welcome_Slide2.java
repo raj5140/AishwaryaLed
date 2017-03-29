@@ -748,7 +748,6 @@ public class Welcome_Slide2 extends Fragment {
     private DatePickerDialog.OnDateSetListener sDateSetListener5 =
             new DatePickerDialog.OnDateSetListener() {
                 public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-
                     mYearIni3 = year;
                     mMonthIni3 = monthOfYear;
                     mDayIni3 = dayOfMonth;

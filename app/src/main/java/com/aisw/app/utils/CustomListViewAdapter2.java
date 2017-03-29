@@ -3,6 +3,7 @@ package com.aisw.app.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,25 +12,32 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.aisw.app.R;
 import com.aisw.app.activity.Full_info_page;
+import com.aisw.app.fragment.SearchFragment;
 
 import java.util.ArrayList;
 import java.util.Locale;
 
+import static com.aisw.app.R.drawable.line;
 
-public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Filterable {
 
-    private static final String LOG_TAG = "CustomViewAdapter";
-    private ArrayList<AshTable> wholeList = new ArrayList<>();
-    private ArrayList<AshTable> currentList;
+public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements Filterable {
+
+    private static final String LOG_TAG = "CustomViewAdapter2";
+    private ArrayList<AshTable2> wholeList = new ArrayList<>();
+    private ArrayList<AshTable2> currentList;
     Context context;
     int resource;
 
 
-    public CustomListViewAdapter(Context context, int resource, ArrayList<AshTable> prod) {
+
+
+    public CustomListViewAdapter2(Context context, int resource, ArrayList<AshTable2> prod) {
         super(context, resource, prod);
 
         this.context = context;
@@ -48,7 +56,7 @@ public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Fil
             convertView = layoutInflater.inflate(R.layout.list_view, null, true);
         }
 
-        AshTable pro = getItem(position);
+        AshTable2 pro = getItem(position);
 
         final String st1 = pro.getCompname();
         final String st2 = pro.getPersonname();
@@ -168,6 +176,36 @@ public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Fil
         });
 
         return convertView;
+    }
+
+    public void filter(String charText) {
+
+
+        charText = charText.toLowerCase(Locale.getDefault());
+        currentList.clear();
+
+        if (charText.length() == 0) {
+
+            currentList.addAll(wholeList);
+            currentList.clear();
+//            Toast.makeText(getContext(),"No Search Available",Toast.LENGTH_LONG).show();
+
+        } else {
+            for (AshTable2 pro : wholeList) {
+                Log.d(LOG_TAG, "filter: 2 searching " + charText + " in " + pro.getStartedate());
+                String start=pro.getStartedate().toLowerCase();
+                if (start.equals(charText)) {
+                    Log.d(LOG_TAG, "filter: found " + pro.getStartedate());
+                    currentList.add(pro);
+                }
+            }
+            notifyDataSetChanged();
+        }
+
+    }
+
+    public void setWholeList(ArrayList<AshTable2> list) {
+        wholeList.addAll(list);
     }
 
 
