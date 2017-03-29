@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android='http://schemas.android.com/apk/res/android'
+    android:layout_width='fill_parent'
+    android:layout_height='fill_parent'
+    android:orientation='vertical'
+    android:padding='10sp' >
+
+    <EditText
+        android:id='@+id/login_name'
+        android:layout_width='match_parent'
+        android:inputType="textAutoComplete"
+        android:background="@layout/rounded_border_edittext"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_height='30dp'
+        android:hint='Username'
+        >
+    </EditText>
+
+    <EditText
+        android:id='@+id/login_password'
+        android:layout_width='match_parent'
+        android:paddingLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@layout/rounded_border_edittext"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_height='30dp'
+        android:hint='Password'
+        android:inputType='textPassword' >
+    </EditText>
+
+</LinearLayout>

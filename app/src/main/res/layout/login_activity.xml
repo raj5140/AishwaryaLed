@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/ash1"
+    android:padding="40dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="text"
+        android:ems="10"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:id="@+id/username"
+        android:drawableLeft="@mipmap/account"
+        android:hint="Username"
+        android:layout_marginTop="140dp"
+        android:textColor="#FFF"
+        android:paddingLeft="0dp"
+        android:drawablePadding="5dp"
+        android:textColorHint="#999"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password"
+        android:drawableLeft="@mipmap/lock"
+        android:hint="Password"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFF"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:paddingLeft="0dp"
+        android:drawablePadding="5dp"
+        android:textColorHint="#999"/>
+
+    <CheckBox
+        android:id="@+id/saveLoginCheckBox"
+        android:layout_width="fill_parent"
+        android:buttonTint="#f45201"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/password"
+        android:text="Remember Me"
+        android:textColor="#FFF" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sign In"
+        android:id="@+id/button"
+        android:background="@drawable/selector_xml_btn_yellow"
+        android:layout_gravity="center_horizontal"
+        android:onClick="checkLogin"/>
+
+
+
+</LinearLayout>
+

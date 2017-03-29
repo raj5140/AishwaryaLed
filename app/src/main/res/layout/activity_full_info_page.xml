@@ -1,0 +1,1224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_full_info_page"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.aisw.app.activity.Full_info_page">
+
+
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Company Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView1" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView1a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp"
+
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Person Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView2" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView2a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView3" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView3a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Mail ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView4" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView4a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView5" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView5a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Alt Mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView6" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView6a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Show Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView7" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView7a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Dispatch Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView8" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView8a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Dispatch Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView9" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView9a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Start Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView10" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView10a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Start Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView11" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView11a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Setup Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView12" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView12a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Setup Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView13" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView13a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Show Start Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView14" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView14a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Show Start Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView15" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView15a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Dismantel Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView16" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView16a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Dismantel Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView17" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView17a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Venu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView18" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView18a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Venue Address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView19" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView19a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Board Size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView20" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView20a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Overall sqft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView21" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView21a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Rate Per Sqft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView22" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView22a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Total Amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView23" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView23a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Transport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView24" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView24a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Stage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView25" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView25a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView26" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView26a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Other Costs 1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView27" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView27a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Other Cost 2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView28" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView28a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Gross Amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView29" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView29a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Bill Required"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView30" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView30a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Billing In Name Of"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView31" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView31a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Service Tax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView32" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView32a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Total Amount 2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView33" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView33a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Advance Amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView34" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView34a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Credit Period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView35" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView35a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Photographer Details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView36" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView36a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Video Person Details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView37" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView37a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Stage, Sound and Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView38" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView38a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Marketing Person Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView39" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView39a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/texxtView39"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Remarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:id="@+id/texxtView40" />
+
+            <TextView
+                android:text="Company NameXXXX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texxtView40a"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

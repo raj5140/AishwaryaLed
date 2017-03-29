@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/bg_screen3">
+
+    <TextView
+        android:id="@+id/txtVw21"
+        android:text="Payment Details"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="45dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/txtVw22"
+        android:text="Gross Amount"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingTop="13dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVw21"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/edtxt16"
+        android:background="@drawable/disabled_edittext_round"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/txtVw21"
+        android:clickable="false"
+        android:focusable="false"
+        android:drawableEnd="@drawable/rs"
+        android:paddingEnd="15dp"
+        android:paddingLeft="10dp"
+        android:inputType="number"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/txtVw22"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/txtVw24"
+        android:text="Service Tax"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVw23"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:id="@+id/edtxt18"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:inputType="number"
+        android:drawableEnd="@drawable/percent"
+        android:paddingEnd="15dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@+id/txtVw24"
+        android:layout_alignBottom="@+id/txtVw24"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/edtxt19"
+        android:background="@drawable/disabled_edittext_round"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:inputType="number"
+        android:clickable="false"
+        android:focusable="false"
+        android:drawableEnd="@drawable/rs"
+        android:paddingEnd="15dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@+id/txtVw25"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/txtVw25"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/edtxt17"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:paddingEnd="15dp"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@+id/txtVw23"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/txtVw23"
+        android:layout_alignBottom="@+id/txtVw23"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/txtVw25"
+        android:text="Total Amount"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:paddingTop="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/txtVw24"
+        android:layout_alignStart="@+id/txtVw23" />
+
+    <TextView
+        android:id="@+id/txtVw26"
+        android:text="Advance Amount"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:paddingTop="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/txtVw25"
+        android:layout_alignStart="@+id/txtVw23" />
+
+    <TextView
+        android:id="@+id/txtVw22a"
+        android:text="Bill Required"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtxt16"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:text="No"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radioButton5"
+        android:layout_toEndOf="@+id/radioButton5"
+        android:id="@+id/radioButton6" />
+
+    <EditText
+        android:id="@+id/edtxt20"
+        android:background="@layout/rounded_border_edittext"
+        android:paddingLeft="10dp"
+        android:inputType="number"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:drawableEnd="@drawable/rs"
+        android:paddingEnd="15dp"
+        android:layout_toLeftOf="@+id/txtVw26"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@+id/txtVw26"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/txtVw26" />
+
+    <TextView
+        android:id="@+id/txtVw27"
+        android:text="Credit Period"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_marginBottom="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/txtVw26"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/edtxt21"
+        android:background="@layout/rounded_border_edittext"
+        android:paddingLeft="10dp"
+        android:inputType="number"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignTop="@+id/txtVw27"
+        android:layout_toEndOf="@+id/txtVw27" />
+
+    <RadioButton
+        android:text="Yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_marginLeft="20dp"
+        android:checked="true"
+        android:layout_toRightOf="@+id/txtVw22a"
+        android:layout_alignBottom="@+id/txtVw22a"
+        android:id="@+id/radioButton5"
+        android:layout_toEndOf="@+id/txtVw26"
+        android:layout_above="@+id/txtVw23" />
+
+    <EditText
+        android:id="@+id/edtxt22"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:paddingEnd="15dp"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/txtVw28"
+        android:layout_alignBottom="@+id/txtVw28"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/edtxt20" />
+
+    <TextView
+        android:id="@+id/txtVw28"
+        android:text="Company name"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#FF040106"
+        android:paddingTop="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/radioButton5"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtVw23"
+        android:text="Billing in the Name of"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_below="@+id/txtVw22a"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="No"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:focusable="false"
+        android:ems="10"
+        android:layout_below="@+id/edtxt21"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="93dp"
+        android:id="@+id/editTextVisib" />
+
+
+</RelativeLayout>
+
+</ScrollView>
