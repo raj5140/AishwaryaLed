@@ -2,31 +2,23 @@ package com.aisw.app.fragment;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
+
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.aisw.app.R;
-import com.aisw.app.activity.Submit_form;
-import com.aisw.app.utils.AshTable;
 import com.aisw.app.utils.AshTable2;
 import com.aisw.app.utils.CustomListViewAdapter2;
 
@@ -41,13 +33,13 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
 import static java.util.Calendar.DATE;
 
 
 public class SearchFragment extends Fragment {
+
 
 
     ListView lstv22;
@@ -60,6 +52,9 @@ public class SearchFragment extends Fragment {
 
     private int mYearIni, mMonthIni, mDayIni, sYearIni, sMonthIni, sDayIni, mYearIni1, mMonthIni1, mDayIni1, sYearIni2, sMonthIni2, sDayIni2, mYearIni3, mMonthIni3, mDayIni3;
 
+    Calendar C = Calendar.getInstance();
+
+    TextView noSearch;
 
 
     @Override
@@ -69,6 +64,7 @@ public class SearchFragment extends Fragment {
 
     }
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -76,23 +72,33 @@ public class SearchFragment extends Fragment {
                 container, false);
 
 
-        getActivity().setTitle("Search in Marketing");
+
+        sMonthIni = C.get(Calendar.MONTH);
+        sDayIni = C.get(Calendar.DAY_OF_MONTH);
+        sYearIni = C.get(Calendar.YEAR);
+
+
+        getActivity().setTitle("Search");
         array222 = new ArrayList<>();
 
         lstv22 = (ListView) view.findViewById(R.id.lst_vw2);
 
         inputSearch1 = (EditText) view.findViewById(R.id.inputSearch1);
 
+        noSearch=(TextView) view.findViewById(R.id.noSearch);
+
 
 
 
         inputSearch1.addTextChangedListener(new TextWatcher() {
             @Override
-            public void afterTextChanged(Editable arg0) {
+            public void afterTextChanged(Editable arg) {
                 // TODO Auto-generated method stub
 
                     String text = inputSearch1.getText().toString().toLowerCase(Locale.getDefault());
                     adapter2.filter(text);
+                    listCheck();
+
 
             }
 
@@ -115,6 +121,7 @@ public class SearchFragment extends Fragment {
 
 
         lstv22.setAdapter(adapter2);
+
 
         inputSearch1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -178,7 +185,13 @@ public class SearchFragment extends Fragment {
 //                new SearchFragment.ReadJSON().execute("https://script.google.com/macros/s/AKfycbygukdW3tt8sCPcFDlkMnMuNu9bH5fpt7bKV50p2bM/exec?id=12BMlJD76KCb3wTB8F3v08pKBEWnY4J-y21zSze-eeDg&sheet=BaseAshTable");
 //            }
 //        });
+
+
+
+
 //
+
+
 
 
     public class ReadJSON extends AsyncTask<String, Integer, String> {
@@ -294,12 +307,12 @@ public class SearchFragment extends Fragment {
 
     private void showDispatchCalendar() {
         Calendar c1 = Calendar.getInstance();
-        DatePickerDialog da = new DatePickerDialog(getActivity(), mDateSetListener, sYearIni, sMonthIni, sDayIni);
+        DatePickerDialog da = new DatePickerDialog(getActivity(), mDateSetListener, mYearIni, mMonthIni, mDayIni);
         c1.add(DATE,0);
-        Date newDate = c1.getTime();
-        da.getDatePicker().setMinDate(newDate.getTime());
-//        long newDate = System.currentTimeMillis();
-//        da.getDatePicker().setMinDate(newDate);
+//        Date newDate = c1.getTime();
+//        da.getDatePicker().setMinDate(newDate.getTime());
+        long newDate = System.currentTimeMillis();
+        da.getDatePicker().setMinDate(newDate);
         da.show();
 
     }
@@ -327,6 +340,51 @@ public class SearchFragment extends Fragment {
             };
 
 
+    public void listCheck() {
+
+        if(adapter2.getCount()!=0){
+            noSearch.setText(" ");
+        }else {
+            noSearch.setText("No Search Result Found");
+        }
+    }
+
+
+
+
+//    private void colocar_fecha() {
+//        inputSearch1.setText((mMonthIni + 1) + "-" + mDayIni + "-" + mYearIni+" ");
+//    }
+//
+//
+//
+//    private DatePickerDialog.OnDateSetListener mDateSetListener =
+//            new DatePickerDialog.OnDateSetListener() {
+//                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+//                    mYearIni = year;
+//                    mMonthIni = monthOfYear;
+//                    mDayIni = dayOfMonth;
+//                    colocar_fecha();
+//
+//                }
+//
+//            };
+//
+//
+//    @Override
+//    protected Dialog onCreateDialog(int id) {
+//        switch (id) {
+//            case DATE_ID:
+//                return new DatePickerDialog(this, mDateSetListener, sYearIni, sMonthIni, sDayIni);
+//
+//
+//        }
+//
+//
+//        return null;
+//    }
+
+
     @Override
     public void onResume() {
 //        Log.e("DEBUG", "onResume of LoginFragment");
@@ -341,6 +399,11 @@ public class SearchFragment extends Fragment {
 //        Log.e("DEBUG", "OnPause of loginFragment");
         super.onPause();
     }
+
+
+
+
+
 
 }
 

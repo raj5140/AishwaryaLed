@@ -39,13 +39,7 @@ public class BaseHomeFragment extends Fragment {
 
         host.addTab( host.newTabSpec( "tab1" ).setIndicator( "Home" ), HomeFragment.class, null );
         host.addTab( host.newTabSpec( "tab2" ).setIndicator( "Search" ), SearchFragment.class, null );
-        host.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                host.clearAllTabs();
-            }
-        });
 
         return view;
 

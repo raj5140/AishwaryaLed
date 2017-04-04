@@ -3,6 +3,7 @@ package com.aisw.app.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,12 +14,16 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.aisw.app.R;
 import com.aisw.app.activity.Full_info_page;
+import com.aisw.app.fragment.SearchFragment;
 
 import java.util.ArrayList;
 import java.util.Locale;
+
+import static com.aisw.app.R.drawable.line;
 
 
 public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements Filterable {
@@ -28,6 +33,7 @@ public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements F
     private ArrayList<AshTable2> currentList;
     Context context;
     int resource;
+
 
 
 
@@ -61,7 +67,7 @@ public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements F
         final String st7 = pro.getShowname();
         final String st8 = pro.getDispatchdate();
         final String st9 = pro.getDispatchtime();
-        final String st10 = pro.getStatedate();
+        final String st10 = pro.getStartedate();
         final String st11 = pro.getStarttime();
         final String st12 = pro.getSetupdate();
         final String st13 = pro.getSetuptime();
@@ -104,7 +110,7 @@ public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements F
         txt3.setText(pro.getShowname());
 
         TextView txt5 = (TextView) convertView.findViewById(R.id.textView44);
-        txt5.setText(pro.getStatedate());
+        txt5.setText(pro.getStartedate());
 
         TextView txt4 = (TextView) convertView.findViewById(R.id.textView6);
         txt4.setText(pro.getEnddate());
@@ -174,6 +180,7 @@ public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements F
 
     public void filter(String charText) {
 
+
         charText = charText.toLowerCase(Locale.getDefault());
         currentList.clear();
 
@@ -181,12 +188,14 @@ public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements F
 
             currentList.addAll(wholeList);
             currentList.clear();
+//            Toast.makeText(getContext(),"No Search Available",Toast.LENGTH_LONG).show();
 
         } else {
             for (AshTable2 pro : wholeList) {
-                Log.d(LOG_TAG, "filter: 2 searching " + charText + " in " + pro.getStatedate());
-                if (pro.getStatedate().toLowerCase().contains(charText)) {
-                    Log.d(LOG_TAG, "filter: found " + pro.getStatedate());
+                Log.d(LOG_TAG, "filter: 2 searching " + charText + " in " + pro.getStartedate());
+                String start=pro.getStartedate().toLowerCase();
+                if (start.equals(charText)) {
+                    Log.d(LOG_TAG, "filter: found " + pro.getStartedate());
                     currentList.add(pro);
                 }
             }
@@ -195,7 +204,10 @@ public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements F
 
     }
 
+
     public void setWholeList(ArrayList<AshTable2> list) {
         wholeList.addAll(list);
     }
+
+
 }

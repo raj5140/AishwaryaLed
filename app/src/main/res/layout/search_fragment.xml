@@ -14,6 +14,12 @@
         android:focusable="false"
         android:paddingRight="15dp"
         android:inputType="textVisiblePassword"/>
+    <TextView
+        android:id="@+id/noSearch"
+        android:layout_below="@+id/inputSearch1"
+        android:layout_width="wrap_content"
+        android:textColor="#ff0011"
+        android:layout_height="wrap_content" />
 
 
         <ListView
@@ -22,7 +28,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/inputSearch1"
+            android:layout_below="@+id/noSearch"
             android:layout_above="@id/but_add">
 
         </ListView>

@@ -59,7 +59,7 @@ public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Fil
         final String st7 = pro.getShowname();
         final String st8 = pro.getDispatchdate();
         final String st9 = pro.getDispatchtime();
-        final String st10 = pro.getStatedate();
+        final String st10 = pro.getStartedate();
         final String st11 = pro.getStarttime();
         final String st12 = pro.getSetupdate();
         final String st13 = pro.getSetuptime();
@@ -102,7 +102,7 @@ public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Fil
         txt3.setText(pro.getShowname());
 
         TextView txt5 = (TextView) convertView.findViewById(R.id.textView44);
-        txt5.setText(pro.getStatedate());
+        txt5.setText(pro.getStartedate());
 
         TextView txt4 = (TextView) convertView.findViewById(R.id.textView6);
         txt4.setText(pro.getEnddate());
@@ -170,26 +170,5 @@ public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Fil
         return convertView;
     }
 
-    public void filter(String charText) {
-        charText = charText.toLowerCase(Locale.getDefault());
 
-        currentList.clear();
-        if (charText.length() == 0) {
-            currentList.addAll(wholeList);
-        } else {
-            for (AshTable pro : wholeList) {
-                Log.d(LOG_TAG, "filter: 2 searching " + charText + " in " + pro.getStatedate());
-                if (pro.getStatedate().toLowerCase().contains(charText)) {
-                    Log.d(LOG_TAG, "filter: found " + pro.getStatedate());
-                    currentList.add(pro);
-                }
-            }
-            notifyDataSetChanged();
-        }
-
-    }
-
-    public void setWholeList(ArrayList<AshTable> list) {
-        wholeList.addAll(list);
-    }
 }

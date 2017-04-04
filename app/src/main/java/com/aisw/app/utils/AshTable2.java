@@ -17,10 +17,10 @@ public class AshTable2 {
     private String 	showname;
     private String 	dispatchdate;
     private String 	dispatchtime;
-    private String 	statedate;
-    private String 	starttime;
     private String 	setupdate;
     private String 	setuptime;
+    private String 	startdate;
+    private String 	starttime;
     private String 	enddate;
     private String 	endtime;
     private String 	dismanteldate;
@@ -53,7 +53,7 @@ public class AshTable2 {
 
 
 
-    public AshTable2 (String timestamp,String compname,String personname,String	address,String mailid,String mob1,String mob2,String showname,String dispatchdate,String dispatchtime,String statedate,String starttime,String setupdate,String	setuptime,String enddate,String	endtime,String dismanteldate,String	dismanteltime,String venu,String venuaddress,String	boardsize,String overallsqft,String	ratepersqft,String	totalamt,String	transport,String stage,String power,String othercost1,String othercost2,String grossamt,String billrequired,String compname2,String	billinnameof,String	servicetax,String totalamt2,String advanceamt,String creditperiod,String photoname,String photomob,String photoemail,String	marketingname,String remark){
+    public AshTable2 (String timestamp,String compname,String personname,String	address,String mailid,String mob1,String mob2,String showname,String dispatchdate,String dispatchtime,String setupdate,String setuptime,String startdate,String	starttime,String enddate,String	endtime,String dismanteldate,String	dismanteltime,String venu,String venuaddress,String	boardsize,String overallsqft,String	ratepersqft,String	totalamt,String	transport,String stage,String power,String othercost1,String othercost2,String grossamt,String billrequired,String compname2,String	billinnameof,String	servicetax,String totalamt2,String advanceamt,String creditperiod,String photoname,String photomob,String photoemail,String	marketingname,String remark){
 
         this.timestamp=timestamp;
         this.compname=compname;
@@ -65,10 +65,10 @@ public class AshTable2 {
         this.showname=showname;
         this.dispatchdate=dispatchdate;
         this.dispatchtime=dispatchtime;
-        this.statedate=statedate;
-        this.starttime=starttime;
         this.setupdate=setupdate;
         this.setuptime=setuptime;
+        this.startdate=startdate;
+        this.starttime=starttime;
         this.enddate=enddate;
         this.endtime=endtime;
         this.dismanteldate=dismanteldate;
@@ -179,12 +179,12 @@ public class AshTable2 {
         this.dispatchtime = dispatchtime;
     }
 
-    public String getStatedate() {
-        return statedate;
+    public String getStartedate() {
+        return startdate;
     }
 
-    public void setStatedate(String statedate) {
-        this.statedate = statedate;
+    public void setStartedate(String statedate) {
+        this.startdate = statedate;
     }
 
     public String getStarttime() {

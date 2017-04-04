@@ -67,7 +67,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
     private Button bt1;
     private Button bt2;
 
-    EditText inputSearch;
     CustomListViewAdapter adapter;
 
 
@@ -275,6 +274,21 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
         }
 
 
+    }
+
+    @Override
+    public void onResume() {
+//        Log.e("DEBUG", "onResume of LoginFragment");
+        onRefresh();
+        super.onResume();
+    }
+
+
+
+    @Override
+    public void onPause() {
+//        Log.e("DEBUG", "OnPause of loginFragment");
+        super.onPause();
     }
 
 
