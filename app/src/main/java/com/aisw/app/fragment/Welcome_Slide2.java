@@ -500,7 +500,7 @@ public class Welcome_Slide2 extends Fragment {
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
                         edtext55.setText(selectedHour + ":" + selectedMinute);
                     }
-                }, hour, minute, true);//Yes 24 hour time
+                }, hour, minute, true);
                 mTimePicker.setTitle("Select Time");
                 mTimePicker.show();
 
@@ -795,7 +795,7 @@ public class Welcome_Slide2 extends Fragment {
         EditText mEditText7 = null;
 
 
-        public MyTextWatcher(EditText mEditText1, EditText mEditText2, EditText mEditText3, EditText mEditText4, EditText textView, EditText mEditText5, EditText mEditText6, EditText mEditText7) {
+    public MyTextWatcher(EditText mEditText1, EditText mEditText2, EditText mEditText3, EditText mEditText4, EditText textView, EditText mEditText5, EditText mEditText6, EditText mEditText7) {
             this.textView = textView;
             this.mEditText1 = mEditText1;
             this.mEditText2 = mEditText2;

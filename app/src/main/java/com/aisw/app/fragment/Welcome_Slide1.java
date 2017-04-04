@@ -4,10 +4,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.EditTextPreference;
 import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
 import android.text.InputType;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,8 +17,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.aisw.app.R;
+import com.aisw.app.utils.MessageEvent;
 
-import java.text.BreakIterator;
+import org.greenrobot.eventbus.EventBus;
 
 
 public class Welcome_Slide1 extends Fragment {
@@ -29,7 +31,12 @@ public class Welcome_Slide1 extends Fragment {
     private static final int RESULT_OK2 = -2;
 
 
-    EditText edtxt1,edtxt2,edtxt7,edtxt5,edtxt6;
+    EditText edtxt1;
+    EditText edtxt2;
+    EditText edtxt7;
+    EditText edtxt5;
+    EditText edtxt6;
+    EditText txtVw3;
 
     ImageButton imgbt1,imgbt2;
 
@@ -46,6 +53,10 @@ public class Welcome_Slide1 extends Fragment {
             edtxt6= (EditText)myFragmentView.findViewById( R.id.edtxt6 );
             imgbt1= (ImageButton) myFragmentView.findViewById( R.id.imgContBut1 );
             imgbt2= (ImageButton) myFragmentView.findViewById( R.id.imgContBut2 );
+        edtxt1 = (EditText) myFragmentView.findViewById(R.id.edtxt1);
+
+
+
         imgbt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +76,24 @@ public class Welcome_Slide1 extends Fragment {
         edtxt1.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
             edtxt2.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
             edtxt7.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
+
+        edtxt1.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                EventBus.getDefault().post(new MessageEvent.Message1(s.toString()));
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
             return myFragmentView;
         }
@@ -150,4 +179,6 @@ public class Welcome_Slide1 extends Fragment {
 
     }
 
+
 }
+

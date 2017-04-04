@@ -3,6 +3,7 @@ package com.aisw.app.activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
 import com.aisw.app.R;
 
 public class Full_info_page extends AppCompatActivity {
@@ -13,95 +14,104 @@ public class Full_info_page extends AppCompatActivity {
         setContentView(R.layout.activity_full_info_page);
 
 
-        Bundle bundle=getIntent().getExtras();
+        Bundle bundle = getIntent().getExtras();
 
-        String	txt1=bundle.getString("name1");
-        String	txt2=bundle.getString("name2");
-        String	txt3=bundle.getString("name3");
-        String	txt4=bundle.getString("name4");
-        String	txt5=bundle.getString("name5");
-        String	txt6=bundle.getString("name6");
-        String	txt7=bundle.getString("name7");
-        String	txt8=bundle.getString("name8");
-        String	txt9=bundle.getString("name9");
-        String	txt10=bundle.getString("name10");
-        String	txt11=bundle.getString("name11");
-        String	txt12=bundle.getString("name12");
-        String	txt13=bundle.getString("name13");
-        String	txt14=bundle.getString("name14");
-        String	txt15=bundle.getString("name15");
-        String	txt16=bundle.getString("name16");
-        String	txt17=bundle.getString("name17");
-        String	txt18=bundle.getString("name18");
-        String	txt19=bundle.getString("name19");
-        String	txt20=bundle.getString("name20");
-        String	txt21=bundle.getString("name21");
-        String	txt22=bundle.getString("name22");
-        String	txt23=bundle.getString("name23");
-        String	txt24=bundle.getString("name24");
-        String	txt25=bundle.getString("name25");
-        String	txt26=bundle.getString("name26");
-        String	txt27=bundle.getString("name27");
-        String	txt28=bundle.getString("name28");
-        String	txt29=bundle.getString("name29");
-        String	txt30=bundle.getString("name30");
-        String	txt31=bundle.getString("name31");
-        String	txt32=bundle.getString("name32");
-        String	txt33=bundle.getString("name33");
-        String	txt34=bundle.getString("name34");
-        String	txt35=bundle.getString("name35");
-        String	txt36=bundle.getString("name36");
-        String	txt37=bundle.getString("name37");
-        String	txt38=bundle.getString("name38");
-        String	txt39=bundle.getString("name39");
-        String	txt40=bundle.getString("name40");
-
+        String txt1 = bundle.getString("name2");
+        String txt2 = bundle.getString("name3");
+        String txt3 = bundle.getString("name4");
+        String txt4 = bundle.getString("name5");
+        String txt5 = bundle.getString("name6");
+        String txt6 = bundle.getString("name7");
+        String txt7 = bundle.getString("name8");
+        String txt8 = bundle.getString("name9");
+        String txt9 = bundle.getString("name10");
+        String txt10 = bundle.getString("name11");
+        String txt11 = bundle.getString("name12");
+        String txt12 = bundle.getString("name13");
+        String txt13 = bundle.getString("name14");
+        String txt14 = bundle.getString("name15");
+        String txt15 = bundle.getString("name16");
+        String txt16 = bundle.getString("name17");
+        String txt17 = bundle.getString("name18");
+        String txt18 = bundle.getString("name19");
+        String txt19 = bundle.getString("name20");
+        String txt20 = bundle.getString("name21");
+        String txt21 = bundle.getString("name22");
+        String txt22 = bundle.getString("name23");
+        String txt23 = bundle.getString("name24");
+        String txt24 = bundle.getString("name25");
+        String txt25 = bundle.getString("name26");
+        String txt26 = bundle.getString("name27");
+        String txt27 = bundle.getString("name28");
+        String txt28 = bundle.getString("name29");
+        String txt29 = bundle.getString("name30");
+        String txt30 = bundle.getString("name31");
+        String txt31 = bundle.getString("name33");
+        String txt32 = bundle.getString("name34");
+        String txt33 = bundle.getString("name35");
+        String txt34 = bundle.getString("name36");
+        String txt35 = bundle.getString("name37");
+        String txt36 = bundle.getString("name38");
+        String txt37 = bundle.getString("name39");
+        String txt38 = bundle.getString("name40");
+        String txt39 = bundle.getString("name41");
+        String txt40 = bundle.getString("name42");
+        String txt41 = bundle.getString("name43");
+        String txt42 = bundle.getString("name44");
+        String txt43 = bundle.getString("name45");
+        String txt44 = bundle.getString("name1");
 
 
 
 
 //        TextView textView1=(TextView)findViewById(R.id.txtVw11);
 
-        TextView	textView1=(TextView)findViewById(R.id.texxtView1a);
-        TextView	textView2=(TextView)findViewById(R.id.texxtView2a);
-        TextView	textView3=(TextView)findViewById(R.id.texxtView3a);
-        TextView	textView4=(TextView)findViewById(R.id.texxtView4a);
-        TextView	textView5=(TextView)findViewById(R.id.texxtView5a);
-        TextView	textView6=(TextView)findViewById(R.id.texxtView6a);
-        TextView	textView7=(TextView)findViewById(R.id.texxtView7a);
-        TextView	textView8=(TextView)findViewById(R.id.texxtView8a);
-        TextView	textView9=(TextView)findViewById(R.id.texxtView9a);
-        TextView	textView10=(TextView)findViewById(R.id.texxtView10a);
-        TextView	textView11=(TextView)findViewById(R.id.texxtView11a);
-        TextView	textView12=(TextView)findViewById(R.id.texxtView12a);
-        TextView	textView13=(TextView)findViewById(R.id.texxtView13a);
-        TextView	textView14=(TextView)findViewById(R.id.texxtView14a);
-        TextView	textView15=(TextView)findViewById(R.id.texxtView15a);
-        TextView	textView16=(TextView)findViewById(R.id.texxtView16a);
-        TextView	textView17=(TextView)findViewById(R.id.texxtView17a);
-        TextView	textView18=(TextView)findViewById(R.id.texxtView18a);
-        TextView	textView19=(TextView)findViewById(R.id.texxtView19a);
-        TextView	textView20=(TextView)findViewById(R.id.texxtView20a);
-        TextView	textView21=(TextView)findViewById(R.id.texxtView21a);
-        TextView	textView22=(TextView)findViewById(R.id.texxtView22a);
-        TextView	textView23=(TextView)findViewById(R.id.texxtView23a);
-        TextView	textView24=(TextView)findViewById(R.id.texxtView24a);
-        TextView	textView25=(TextView)findViewById(R.id.texxtView25a);
-        TextView	textView26=(TextView)findViewById(R.id.texxtView26a);
-        TextView	textView27=(TextView)findViewById(R.id.texxtView27a);
-        TextView	textView28=(TextView)findViewById(R.id.texxtView28a);
-        TextView	textView29=(TextView)findViewById(R.id.texxtView29a);
-        TextView	textView30=(TextView)findViewById(R.id.texxtView30a);
-        TextView	textView31=(TextView)findViewById(R.id.texxtView31a);
-        TextView	textView32=(TextView)findViewById(R.id.texxtView32a);
-        TextView	textView33=(TextView)findViewById(R.id.texxtView33a);
-        TextView	textView34=(TextView)findViewById(R.id.texxtView34a);
-        TextView	textView35=(TextView)findViewById(R.id.texxtView35a);
-        TextView	textView36=(TextView)findViewById(R.id.texxtView36a);
-        TextView	textView37=(TextView)findViewById(R.id.texxtView37a);
-        TextView	textView38=(TextView)findViewById(R.id.texxtView38a);
-        TextView	textView39=(TextView)findViewById(R.id.texxtView39a);
-        TextView	textView40=(TextView)findViewById(R.id.texxtView40a);
+        TextView textView1 = (TextView) findViewById(R.id.texxtView1a);
+        TextView textView2 = (TextView) findViewById(R.id.texxtView2a);
+        TextView textView3 = (TextView) findViewById(R.id.texxtView3a);
+        TextView textView4 = (TextView) findViewById(R.id.texxtView4a);
+        TextView textView5 = (TextView) findViewById(R.id.texxtView5a);
+        TextView textView6 = (TextView) findViewById(R.id.texxtView6a);
+        TextView textView7 = (TextView) findViewById(R.id.texxtView7a);
+        TextView textView8 = (TextView) findViewById(R.id.texxtView8a);
+        TextView textView9 = (TextView) findViewById(R.id.texxtView9a);
+        TextView textView10 = (TextView) findViewById(R.id.texxtView10a);
+        TextView textView11 = (TextView) findViewById(R.id.texxtView11a);
+        TextView textView12 = (TextView) findViewById(R.id.texxtView12a);
+        TextView textView13 = (TextView) findViewById(R.id.texxtView13a);
+        TextView textView14 = (TextView) findViewById(R.id.texxtView14a);
+        TextView textView15 = (TextView) findViewById(R.id.texxtView15a);
+        TextView textView16 = (TextView) findViewById(R.id.texxtView16a);
+        TextView textView17 = (TextView) findViewById(R.id.texxtView17a);
+        TextView textView18 = (TextView) findViewById(R.id.texxtView18a);
+        TextView textView19 = (TextView) findViewById(R.id.texxtView19a);
+        TextView textView20 = (TextView) findViewById(R.id.texxtView20a);
+        TextView textView21 = (TextView) findViewById(R.id.texxtView21a);
+        TextView textView22 = (TextView) findViewById(R.id.texxtView22a);
+        TextView textView23 = (TextView) findViewById(R.id.texxtView23a);
+        TextView textView24 = (TextView) findViewById(R.id.texxtView24a);
+        TextView textView25 = (TextView) findViewById(R.id.texxtView25a);
+        TextView textView26 = (TextView) findViewById(R.id.texxtView26a);
+        TextView textView27 = (TextView) findViewById(R.id.texxtView27a);
+        TextView textView28 = (TextView) findViewById(R.id.texxtView28a);
+        TextView textView29 = (TextView) findViewById(R.id.texxtView29a);
+        TextView textView30 = (TextView) findViewById(R.id.texxtView30a);
+        TextView textView31 = (TextView) findViewById(R.id.texxtView31a);
+        TextView textView32 = (TextView) findViewById(R.id.texxtView32a);
+        TextView textView33 = (TextView) findViewById(R.id.texxtView33a);
+        TextView textView34 = (TextView) findViewById(R.id.texxtView34a);
+        TextView textView35 = (TextView) findViewById(R.id.texxtView35a);
+        TextView textView36 = (TextView) findViewById(R.id.texxtView36a);
+        TextView textView37 = (TextView) findViewById(R.id.texxtView37a);
+        TextView textView38 = (TextView) findViewById(R.id.texxtView38a);
+        TextView textView39 = (TextView) findViewById(R.id.texxtView39a);
+        TextView textView40 = (TextView) findViewById(R.id.texxtView40a);
+        TextView textView41 = (TextView) findViewById(R.id.texxtView41a);
+        TextView textView42 = (TextView) findViewById(R.id.texxtView42a);
+        TextView textView43 = (TextView) findViewById(R.id.texxtView43a);
+        TextView textView44 = (TextView) findViewById(R.id.texxtView44a);
+//        TextView textView45 = (TextView) findViewById(R.id.texxtView45a);
+
 
         textView1.setText(txt1);
         textView2.setText(txt2);
@@ -143,7 +153,10 @@ public class Full_info_page extends AppCompatActivity {
         textView38.setText(txt38);
         textView39.setText(txt39);
         textView40.setText(txt40);
-
+        textView41.setText(txt41);
+        textView42.setText(txt42);
+        textView43.setText(txt43);
+        textView44.setText(txt44);
 
     }
 }

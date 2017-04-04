@@ -43,7 +43,7 @@
 
     <TextView
         android:id="@+id/txtVw26xx"
-        android:text="Stage, Sound And Light"
+        android:text="Stage Details"
         android:textSize="30dp"
         android:textStyle="bold"
         android:layout_marginTop="30dp"
@@ -91,6 +91,17 @@
         android:layout_toRightOf="@+id/txtVw28"
         android:layout_width="match_parent"
         android:layout_height="30dp" />
+
+    <ImageButton
+        android:id="@+id/imgContBut3"
+        android:src="@drawable/plusas"
+        android:paddingRight="15dp"
+        android:layout_alignTop="@+id/edtxt21x"
+        android:layout_alignBottom="@+id/edtxt21x"
+        android:layout_alignRight="@+id/edtxt21x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" />
 
     <TextView
         android:id="@+id/txtVw28"
@@ -152,11 +163,11 @@
         android:layout_toRightOf="@+id/txtVw30"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_below="@+id/edtxt22xxx"
+        android:layout_below="@+id/edtxt22xxxLight"
         android:textCursorDrawable="@drawable/color_cursor"
         android:layout_alignBaseline="@+id/txtVw30"
         android:layout_alignBottom="@+id/txtVw30"
-        android:layout_alignParentEnd="true" />
+        />
 
     <EditText
         android:id="@+id/edtxt24"
@@ -168,7 +179,7 @@
         android:layout_height="70dp"
         android:textCursorDrawable="@drawable/color_cursor"
         android:layout_toRightOf="@+id/txtVw31"
-        android:layout_below="@+id/txtVw30"
+        android:layout_below="@+id/edtxt23"
         android:layout_marginTop="15dp" />
 
     <RadioButton
@@ -230,6 +241,17 @@
         android:layout_width="match_parent"
         android:layout_height="30dp" />
 
+    <ImageButton
+        android:id="@+id/imgContBut4"
+        android:src="@drawable/plusas"
+        android:paddingRight="15dp"
+        android:layout_alignTop="@+id/edtxt21xx"
+        android:layout_alignBottom="@+id/edtxt21xx"
+        android:layout_alignRight="@+id/edtxt21xx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" />
+
     <TextView
         android:id="@+id/txtVw28x"
         android:text="Mobile"
@@ -278,7 +300,7 @@
         android:textColor="#FF040106"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edtxt22xxx"
+        android:layout_below="@+id/edtxt22xxxLight"
         android:layout_alignParentStart="true"
         android:layout_marginTop="35dp" />
 
@@ -340,6 +362,17 @@
         android:layout_toRightOf="@+id/txtVw28xx"
         android:layout_width="match_parent"
         android:layout_height="30dp" />
+
+    <ImageButton
+        android:id="@+id/imgContBut5"
+        android:src="@drawable/plusas"
+        android:paddingRight="15dp"
+        android:layout_alignTop="@+id/edtxt21xxx"
+        android:layout_alignBottom="@+id/edtxt21xxx"
+        android:layout_alignRight="@+id/edtxt21xxx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" />
 
     <TextView
         android:id="@+id/txtVw28xx"
@@ -429,12 +462,284 @@
         android:inputType="textPersonName"
         android:hint="Name"
         android:ems="10"
+        android:layout_below="@+id/editText3Invs"
+        android:layout_alignEnd="@+id/editText1Invs"
+        android:layout_marginTop="11dp"
+        android:visibility="invisible"
+        android:id="@+id/editText4Invs" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
+        android:layout_below="@+id/editText4Invs"
+        android:layout_alignEnd="@+id/editText1Invs"
+        android:layout_marginTop="11dp"
+        android:visibility="invisible"
+        android:id="@+id/editText5Invs" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
         android:visibility="invisible"
         android:layout_marginTop="26dp"
         android:id="@+id/editText2Invs"
         android:layout_below="@+id/editText1Invs"
         android:layout_alignEnd="@+id/editText1Invs" />
 
+
+    <TextView
+        android:id="@+id/txtVw26xxSound"
+        android:text="Sound Details"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="#FF040106"
+        android:layout_below="@+id/edtxt22xxx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <RadioButton
+        android:text="   Yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_below="@+id/txtVw26xxSound"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_alignStart="@+id/radioButton9"
+        android:id="@+id/radioButton11Sound" />
+
+    <RadioButton
+        android:text="   No"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/radioButton11Sound"
+        android:layout_alignStart="@+id/radioButton10"
+        android:id="@+id/radioButton12Sound" />
+
+
+
+    <EditText
+        android:id="@+id/edtxt20xxxSound"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/radioButton11Sound"
+        android:layout_marginTop="10dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_toRightOf="@+id/txtVw27xxSound"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/txtVw27xxSound"
+        android:text="Name"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtxt20xxxSound"
+        android:layout_alignBottom="@+id/edtxt20xxxSound"
+        android:layout_alignStart="@+id/txtVw28xxSound" />
+
+    <EditText
+        android:id="@+id/edtxt21xxxSound"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/txtVw27xxSound"
+        android:paddingLeft="10dp"
+        android:inputType="number"
+        android:layout_marginTop="8dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_toRightOf="@+id/txtVw28xxSound"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <ImageButton
+        android:id="@+id/imgContBut6"
+        android:src="@drawable/plusas"
+        android:paddingRight="15dp"
+        android:layout_alignTop="@+id/edtxt21xxxSound"
+        android:layout_alignBottom="@+id/edtxt21xxxSound"
+        android:layout_alignRight="@+id/edtxt21xxxSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/txtVw28xxSound"
+        android:text="Mobile"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edtxt21xxxSound"
+        />
+
+    <EditText
+        android:id="@+id/edtxt22xxxSound"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="6dp"
+        android:paddingLeft="10dp"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/txtVw28xxSound"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_toRightOf="@+id/txtVw29xxSound"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/txtVw29xxSound"
+        android:text="Email ID"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtxt22xxxSound"
+        android:layout_alignBottom="@+id/edtxt22xxxSound"
+        android:layout_alignStart="@+id/txtVw30Sound" />
+
+
+    <TextView
+        android:id="@+id/txtVw26xxLight"
+        android:text="Light Details"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="#FF040106"
+        android:layout_below="@+id/txtVw29xxSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <RadioButton
+        android:text="   Yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_below="@+id/txtVw26xxLight"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_alignStart="@+id/radioButton9"
+        android:id="@+id/radioButton11Light" />
+
+    <RadioButton
+        android:text="   No"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/radioButton11Light"
+        android:layout_alignStart="@+id/radioButton10"
+        android:id="@+id/radioButton12Light" />
+
+
+
+    <EditText
+        android:id="@+id/edtxt20xxxLight"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/radioButton11Light"
+        android:layout_marginTop="10dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_toRightOf="@+id/txtVw27xxLight"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/txtVw27xxLight"
+        android:text="Name"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtxt20xxxLight"
+        android:layout_alignBottom="@+id/edtxt20xxxLight"
+        android:layout_alignStart="@+id/txtVw28xxLight" />
+
+    <EditText
+        android:id="@+id/edtxt21xxxLight"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/txtVw27xxLight"
+        android:paddingLeft="10dp"
+        android:inputType="number"
+        android:layout_marginTop="8dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_toRightOf="@+id/txtVw28xxLight"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+
+    <ImageButton
+        android:id="@+id/imgContBut7"
+        android:src="@drawable/plusas"
+        android:paddingRight="15dp"
+        android:layout_alignTop="@+id/edtxt21xxxLight"
+        android:layout_alignBottom="@+id/edtxt21xxxLight"
+        android:layout_alignRight="@+id/edtxt21xxxLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" />
+
+
+
+    <TextView
+        android:id="@+id/txtVw28xxLight"
+        android:text="Mobile"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edtxt21xxxLight"
+        />
+
+    <EditText
+        android:id="@+id/edtxt22xxxLight"
+        android:background="@layout/rounded_border_edittext"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="6dp"
+        android:paddingLeft="10dp"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/txtVw28xxLight"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_toRightOf="@+id/txtVw29xxLight"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/txtVw29xxLight"
+        android:text="Email ID"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="#FF040106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtxt22xxxLight"
+        android:layout_alignBottom="@+id/edtxt22xxxLight"
+        android:layout_alignStart="@+id/txtVw30Light" />
 
 </RelativeLayout>
 

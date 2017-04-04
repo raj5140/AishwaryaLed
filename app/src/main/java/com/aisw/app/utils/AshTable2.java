@@ -7,96 +7,102 @@ package com.aisw.app.utils;
 public class AshTable2 {
 
 
-    private String 	timestamp;
-    private String 	compname;
-    private String 	personname;
-    private String 	address;
-    private String 	mailid;
-    private String 	mob1;
-    private String 	mob2;
-    private String 	showname;
-    private String 	dispatchdate;
-    private String 	dispatchtime;
-    private String 	setupdate;
-    private String 	setuptime;
-    private String 	startdate;
-    private String 	starttime;
-    private String 	enddate;
-    private String 	endtime;
-    private String 	dismanteldate;
-    private String 	dismanteltime;
-    private String 	venu;
-    private String 	venuaddress;
-    private String 	boardsize;
-    private String 	overallsqft;
-    private String 	ratepersqft;
-    private String 	totalamt;
-    private String 	transport;
-    private String 	stage;
-    private String 	power;
-    private String 	othercost1;
-    private String 	othercost2;
-    private String 	grossamt;
-    private String 	billrequired;
-    private String 	compname2;
-    private String 	billinnameof;
-    private String 	servicetax;
-    private String 	totalamt2;
-    private String 	advanceamt;
-    private String 	creditperiod;
-    private String 	photoname;
-    private String 	photomob;
-    private String 	photoemail;
-    private String 	marketingname;
-    private String 	remark;
+    private String timestamp;
+    private String compname;
+    private String personname;
+    private String address;
+    private String mailid;
+    private String mobile1;
+    private String mobile2;
+    private String showname;
+    private String dispatchdate;
+    private String dispatchtime;
+    private String setupdate;
+    private String setuptime;
+    private String startdate;
+    private String starttime;
+    private String showenddate;
+    private String showendtime;
+    private String dismanteldate;
+    private String dismanteltime;
+    private String venu;
+    private String venueaddress;
+    private String boardsize;
+    private String overallsqft;
+    private String ratepersqft;
+    private String totalamount;
+    private String transport;
+    private String stage;
+    private String power;
+    private String othercosts1;
+    private String othercost2;
+    private String grossamount;
+    private String billrequired;
+    private String companyname2;
+    private String billinginnameof;
+    private String servicetax;
+    private String totalamount2;
+    private String advanceamount;
+    private String balanceamount;
+    private String creditperiod;
+    private String photographerdetails;
+    private String videodetails;
+    private String stagedetails;
+    private String sounddetails;
+    private String lightdetails;
+    private String marketingname;
+    private String remarksremarks;
 
 
+    public AshTable2(String timestamp, String compname, String personname, String address, String mailid, String mobile1, String mobile2, String showname, String dispatchdate, String dispatchtime, String setupdate, String setuptime, String startdate, String starttime, String showenddate, String showendtime, String dismanteldate, String dismanteltime, String venu, String venueaddress, String boardsize, String overallsqft, String ratepersqft, String totalamount, String transport, String stage, String power, String othercosts1, String othercost2, String grossamount, String billrequired, String companyname2, String billinginnameof, String servicetax, String totalamount2, String advanceamount, String balanceamount, String creditperiod, String photographerdetails, String videodetails, String stagedetails, String sounddetails, String lightdetails, String marketingname, String remarksremarks) {
+
+        this.timestamp = timestamp;
+        this.compname = compname;
+        this.personname = personname;
+        this.address = address;
+        this.mailid = mailid;
+        this.mobile1 = mobile1;
+        this.mobile2 = mobile2;
+        this.showname = showname;
+        this.dispatchdate = dispatchdate;
+        this.dispatchtime = dispatchtime;
+        this.setupdate = setupdate;
+        this.setuptime = setuptime;
+        this.startdate = startdate;
+        this.starttime = starttime;
+        this.showenddate = showenddate;
+        this.showendtime = showendtime;
+        this.dismanteldate = dismanteldate;
+        this.dismanteltime = dismanteltime;
+        this.venu = venu;
+        this.venueaddress = venueaddress;
+        this.boardsize = boardsize;
+        this.overallsqft = overallsqft;
+        this.ratepersqft = ratepersqft;
+        this.totalamount = totalamount;
+        this.transport = transport;
+        this.stage = stage;
+        this.power = power;
+        this.othercosts1 = othercosts1;
+        this.othercost2 = othercost2;
+        this.grossamount = grossamount;
+        this.billrequired = billrequired;
+        this.companyname2 = companyname2;
+        this.billinginnameof = billinginnameof;
+        this.servicetax = servicetax;
+        this.totalamount2 = totalamount2;
+        this.advanceamount = advanceamount;
+        this.balanceamount = balanceamount;
+        this.creditperiod = creditperiod;
+        this.photographerdetails = photographerdetails;
+        this.videodetails = videodetails;
+        this.stagedetails = stagedetails;
+        this.sounddetails = sounddetails;
+        this.lightdetails = lightdetails;
+        this.marketingname = marketingname;
+        this.remarksremarks = remarksremarks;
 
 
-    public AshTable2 (String timestamp,String compname,String personname,String	address,String mailid,String mob1,String mob2,String showname,String dispatchdate,String dispatchtime,String setupdate,String setuptime,String startdate,String	starttime,String enddate,String	endtime,String dismanteldate,String	dismanteltime,String venu,String venuaddress,String	boardsize,String overallsqft,String	ratepersqft,String	totalamt,String	transport,String stage,String power,String othercost1,String othercost2,String grossamt,String billrequired,String compname2,String	billinnameof,String	servicetax,String totalamt2,String advanceamt,String creditperiod,String photoname,String photomob,String photoemail,String	marketingname,String remark){
-
-        this.timestamp=timestamp;
-        this.compname=compname;
-        this.personname=personname;
-        this.address=address;
-        this.mailid=mailid;
-        this.mob1=mob1;
-        this.mob2=mob2;
-        this.showname=showname;
-        this.dispatchdate=dispatchdate;
-        this.dispatchtime=dispatchtime;
-        this.setupdate=setupdate;
-        this.setuptime=setuptime;
-        this.startdate=startdate;
-        this.starttime=starttime;
-        this.enddate=enddate;
-        this.endtime=endtime;
-        this.dismanteldate=dismanteldate;
-        this.dismanteltime=dismanteltime;
-        this.venu=venu;
-        this.venuaddress=venuaddress;
-        this.boardsize=boardsize;
-        this.overallsqft=overallsqft;
-        this.ratepersqft=ratepersqft;
-        this.totalamt=totalamt;
-        this.transport=transport;
-        this.stage=stage;
-        this.power=power;
-        this.othercost1=othercost1;
-        this.othercost2=othercost2;
-        this.grossamt=grossamt;
-        this.billrequired=billrequired;
-        this.compname2=compname2;
-        this.billinnameof=billinnameof;
-        this.servicetax=servicetax;
-        this.totalamt2=totalamt2;
-        this.advanceamt=advanceamt;
-        this.creditperiod=creditperiod;
-        this.photoname=photoname;
-        this.photomob=photomob;
-        this.photoemail=photoemail;
-        this.marketingname=marketingname;
-        this.remark=remark;
     }
 
     public String getTimestamp() {
@@ -139,20 +145,20 @@ public class AshTable2 {
         this.mailid = mailid;
     }
 
-    public String getMob1() {
-        return mob1;
+    public String getMobile1() {
+        return mobile1;
     }
 
-    public void setMob1(String mob1) {
-        this.mob1 = mob1;
+    public void setMobile1(String mobile1) {
+        this.mobile1 = mobile1;
     }
 
-    public String getMob2() {
-        return mob2;
+    public String getMobile2() {
+        return mobile2;
     }
 
-    public void setMob2(String mob2) {
-        this.mob2 = mob2;
+    public void setMobile2(String mobile2) {
+        this.mobile2 = mobile2;
     }
 
     public String getShowname() {
@@ -179,22 +185,6 @@ public class AshTable2 {
         this.dispatchtime = dispatchtime;
     }
 
-    public String getStartedate() {
-        return startdate;
-    }
-
-    public void setStartedate(String statedate) {
-        this.startdate = statedate;
-    }
-
-    public String getStarttime() {
-        return starttime;
-    }
-
-    public void setStarttime(String starttime) {
-        this.starttime = starttime;
-    }
-
     public String getSetupdate() {
         return setupdate;
     }
@@ -211,20 +201,36 @@ public class AshTable2 {
         this.setuptime = setuptime;
     }
 
-    public String getEnddate() {
-        return enddate;
+    public String getStartdate() {
+        return startdate;
     }
 
-    public void setEnddate(String enddate) {
-        this.enddate = enddate;
+    public void setStartdate(String startdate) {
+        this.startdate = startdate;
     }
 
-    public String getEndtime() {
-        return endtime;
+    public String getStarttime() {
+        return starttime;
     }
 
-    public void setEndtime(String endtime) {
-        this.endtime = endtime;
+    public void setStarttime(String starttime) {
+        this.starttime = starttime;
+    }
+
+    public String getShowenddate() {
+        return showenddate;
+    }
+
+    public void setShowenddate(String showenddate) {
+        this.showenddate = showenddate;
+    }
+
+    public String getShowendtime() {
+        return showendtime;
+    }
+
+    public void setShowendtime(String showendtime) {
+        this.showendtime = showendtime;
     }
 
     public String getDismanteldate() {
@@ -251,12 +257,12 @@ public class AshTable2 {
         this.venu = venu;
     }
 
-    public String getVenuaddress() {
-        return venuaddress;
+    public String getVenueaddress() {
+        return venueaddress;
     }
 
-    public void setVenuaddress(String venuaddress) {
-        this.venuaddress = venuaddress;
+    public void setVenueaddress(String venueaddress) {
+        this.venueaddress = venueaddress;
     }
 
     public String getBoardsize() {
@@ -283,12 +289,12 @@ public class AshTable2 {
         this.ratepersqft = ratepersqft;
     }
 
-    public String getTotalamt() {
-        return totalamt;
+    public String getTotalamount() {
+        return totalamount;
     }
 
-    public void setTotalamt(String totalamt) {
-        this.totalamt = totalamt;
+    public void setTotalamount(String totalamount) {
+        this.totalamount = totalamount;
     }
 
     public String getTransport() {
@@ -315,12 +321,12 @@ public class AshTable2 {
         this.power = power;
     }
 
-    public String getOthercost1() {
-        return othercost1;
+    public String getOthercosts1() {
+        return othercosts1;
     }
 
-    public void setOthercost1(String othercost1) {
-        this.othercost1 = othercost1;
+    public void setOthercosts1(String othercosts1) {
+        this.othercosts1 = othercosts1;
     }
 
     public String getOthercost2() {
@@ -331,12 +337,12 @@ public class AshTable2 {
         this.othercost2 = othercost2;
     }
 
-    public String getGrossamt() {
-        return grossamt;
+    public String getGrossamount() {
+        return grossamount;
     }
 
-    public void setGrossamt(String grossamt) {
-        this.grossamt = grossamt;
+    public void setGrossamount(String grossamount) {
+        this.grossamount = grossamount;
     }
 
     public String getBillrequired() {
@@ -347,20 +353,20 @@ public class AshTable2 {
         this.billrequired = billrequired;
     }
 
-    public String getCompname2() {
-        return compname2;
+    public String getCompanyname2() {
+        return companyname2;
     }
 
-    public void setCompname2(String compname2) {
-        this.compname2 = compname2;
+    public void setCompanyname2(String companyname2) {
+        this.companyname2 = companyname2;
     }
 
-    public String getBillinnameof() {
-        return billinnameof;
+    public String getBillinginnameof() {
+        return billinginnameof;
     }
 
-    public void setBillinnameof(String billinnameof) {
-        this.billinnameof = billinnameof;
+    public void setBillinginnameof(String billinginnameof) {
+        this.billinginnameof = billinginnameof;
     }
 
     public String getServicetax() {
@@ -371,20 +377,28 @@ public class AshTable2 {
         this.servicetax = servicetax;
     }
 
-    public String getTotalamt2() {
-        return totalamt2;
+    public String getTotalamount2() {
+        return totalamount2;
     }
 
-    public void setTotalamt2(String totalamt2) {
-        this.totalamt2 = totalamt2;
+    public void setTotalamount2(String totalamount2) {
+        this.totalamount2 = totalamount2;
     }
 
-    public String getAdvanceamt() {
-        return advanceamt;
+    public String getAdvanceamount() {
+        return advanceamount;
     }
 
-    public void setAdvanceamt(String advanceamt) {
-        this.advanceamt = advanceamt;
+    public void setAdvanceamount(String advanceamount) {
+        this.advanceamount = advanceamount;
+    }
+
+    public String getBalanceamount() {
+        return balanceamount;
+    }
+
+    public void setBalanceamount(String balanceamount) {
+        this.balanceamount = balanceamount;
     }
 
     public String getCreditperiod() {
@@ -395,28 +409,44 @@ public class AshTable2 {
         this.creditperiod = creditperiod;
     }
 
-    public String getPhotoname() {
-        return photoname;
+    public String getPhotographerdetails() {
+        return photographerdetails;
     }
 
-    public void setPhotoname(String photoname) {
-        this.photoname = photoname;
+    public void setPhotographerdetails(String photographerdetails) {
+        this.photographerdetails = photographerdetails;
     }
 
-    public String getPhotomob() {
-        return photomob;
+    public String getVideodetails() {
+        return videodetails;
     }
 
-    public void setPhotomob(String photomob) {
-        this.photomob = photomob;
+    public void setVideodetails(String videodetails) {
+        this.videodetails = videodetails;
     }
 
-    public String getPhotoemail() {
-        return photoemail;
+    public String getStagedetails() {
+        return stagedetails;
     }
 
-    public void setPhotoemail(String photoemail) {
-        this.photoemail = photoemail;
+    public void setStagedetails(String stagedetails) {
+        this.stagedetails = stagedetails;
+    }
+
+    public String getSounddetails() {
+        return sounddetails;
+    }
+
+    public void setSounddetails(String sounddetails) {
+        this.sounddetails = sounddetails;
+    }
+
+    public String getLightdetails() {
+        return lightdetails;
+    }
+
+    public void setLightdetails(String lightdetails) {
+        this.lightdetails = lightdetails;
     }
 
     public String getMarketingname() {
@@ -427,11 +457,11 @@ public class AshTable2 {
         this.marketingname = marketingname;
     }
 
-    public String getRemark() {
-        return remark;
+    public String getRemarksremarks() {
+        return remarksremarks;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setRemarksremarks(String remarksremarks) {
+        this.remarksremarks = remarksremarks;
     }
 }

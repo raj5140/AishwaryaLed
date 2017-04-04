@@ -42,7 +42,7 @@ public class LoginActivity extends Activity {
             saveLogin = loginPreferences.getBoolean("saveLogin", false);
             if (saveLogin == true) {
                 userEditText.setText(loginPreferences.getString("username", ""));
-//                passEditText.setText(loginPreferences.getString("password", ""));
+                passEditText.setText(loginPreferences.getString("password", ""));
                 saveLoginCheckBox.setChecked(true);
             }
 
@@ -112,7 +112,7 @@ public class LoginActivity extends Activity {
                         if (saveLoginCheckBox.isChecked()) {
                             loginPrefsEditor.putBoolean("saveLogin", true);
                             loginPrefsEditor.putString("username", email);
-//                            loginPrefsEditor.putString("password", pass);
+                            loginPrefsEditor.putString("password", pass);
                             loginPrefsEditor.commit();
                         } else {
                             loginPrefsEditor.clear();

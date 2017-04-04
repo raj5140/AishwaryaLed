@@ -58,62 +58,67 @@ public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements F
 
         AshTable2 pro = getItem(position);
 
-        final String st1 = pro.getCompname();
-        final String st2 = pro.getPersonname();
-        final String st3 = pro.getAddress();
-        final String st4 = pro.getMailid();
-        final String st5 = pro.getMob1();
-        final String st6 = pro.getMob2();
-        final String st7 = pro.getShowname();
-        final String st8 = pro.getDispatchdate();
-        final String st9 = pro.getDispatchtime();
-        final String st10 = pro.getStartedate();
-        final String st11 = pro.getStarttime();
-        final String st12 = pro.getSetupdate();
-        final String st13 = pro.getSetuptime();
-        final String st14 = pro.getEnddate();
-        final String st15 = pro.getEndtime();
-        final String st16 = pro.getDismanteldate();
-        final String st17 = pro.getDismanteltime();
-        final String st18 = pro.getVenu();
-        final String st19 = pro.getVenuaddress();
-        final String st20 = pro.getBoardsize();
-        final String st21 = pro.getOverallsqft();
-        final String st22 = pro.getRatepersqft();
-        final String st23 = pro.getTotalamt();
-        final String st24 = pro.getTransport();
-        final String st25 = pro.getStage();
-        final String st26 = pro.getPower();
-        final String st27 = pro.getOthercost1();
-        final String st28 = pro.getOthercost2();
-        final String st29 = pro.getGrossamt();
-        final String st30 = pro.getBillrequired();
-        final String st31 = pro.getBillinnameof();
-        final String st32 = pro.getServicetax();
-        final String st33 = pro.getTotalamt2();
-        final String st34 = pro.getAdvanceamt();
-        final String st35 = pro.getCreditperiod();
-        final String st36 = pro.getPhotoname();
-        final String st37 = pro.getPhotomob();
-        final String st38 = pro.getPhotoemail();
-        final String st39 = pro.getMarketingname();
-        final String st40 = pro.getRemark();
+        final String st1 = pro.getTimestamp();
+        final String st2 = pro.getCompname();
+        final String st3 = pro.getPersonname();
+        final String st4 = pro.getAddress();
+        final String st5 = pro.getMailid();
+        final String st6 = pro.getMobile1();
+        final String st7 = pro.getMobile2();
+        final String st8 = pro.getShowname();
+        final String st9 = pro.getDispatchdate();
+        final String st10 = pro.getDispatchtime();
+        final String st11 = pro.getStartdate();
+        final String st12 = pro.getStarttime();
+        final String st13 = pro.getSetupdate();
+        final String st14 = pro.getSetuptime();
+        final String st15 = pro.getShowenddate();
+        final String st16 = pro.getShowendtime();
+        final String st17 = pro.getDismanteldate();
+        final String st18 = pro.getDismanteltime();
+        final String st19 = pro.getVenu();
+        final String st20 = pro.getVenueaddress();
+        final String st21 = pro.getBoardsize();
+        final String st22 = pro.getOverallsqft();
+        final String st23 = pro.getRatepersqft();
+        final String st24 = pro.getTotalamount();
+        final String st25 = pro.getTransport();
+        final String st26 = pro.getStage();
+        final String st27 = pro.getPower();
+        final String st28 = pro.getOthercosts1();
+        final String st29 = pro.getOthercost2();
+        final String st30 = pro.getGrossamount();
+        final String st31 = pro.getBillrequired();
+        final String st32 = pro.getCompanyname2();
+        final String st33 = pro.getBillinginnameof();
+        final String st34 = pro.getServicetax();
+        final String st35 = pro.getTotalamount2();
+        final String st36 = pro.getAdvanceamount();
+        final String st37 = pro.getBalanceamount();
+        final String st38 = pro.getCreditperiod();
+        final String st39 = pro.getPhotographerdetails();
+        final String st40 = pro.getVideodetails();
+        final String st41 = pro.getStagedetails();
+        final String st42 = pro.getSounddetails();
+        final String st43 = pro.getLightdetails();
+        final String st44 = pro.getMarketingname();
+        final String st45 = pro.getRemarksremarks();
 
 
         TextView txt1 = (TextView) convertView.findViewById(R.id.textView11);
         txt1.setText(pro.getPersonname());
 
         TextView txt2 = (TextView) convertView.findViewById(R.id.textView22);
-        txt2.setText(pro.getMob1());
+        txt2.setText(pro.getMobile1());
 
         TextView txt3 = (TextView) convertView.findViewById(R.id.textView33);
         txt3.setText(pro.getShowname());
 
         TextView txt5 = (TextView) convertView.findViewById(R.id.textView44);
-        txt5.setText(pro.getStartedate());
+        txt5.setText(pro.getStartdate());
 
         TextView txt4 = (TextView) convertView.findViewById(R.id.textView6);
-        txt4.setText(pro.getEnddate());
+        txt4.setText(pro.getShowenddate());
 
         TextView txt6 = (TextView) convertView.findViewById(R.id.textView55);
         txt6.setText(pro.getBoardsize());
@@ -169,6 +174,11 @@ public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements F
                 intent.putExtra("name38", String.valueOf(st38));
                 intent.putExtra("name39", String.valueOf(st39));
                 intent.putExtra("name40", String.valueOf(st40));
+                intent.putExtra("name41", String.valueOf(st41));
+                intent.putExtra("name42", String.valueOf(st42));
+                intent.putExtra("name43", String.valueOf(st43));
+                intent.putExtra("name44", String.valueOf(st44));
+                intent.putExtra("name45", String.valueOf(st45));
 
 
                 context.startActivity(intent);
@@ -188,20 +198,20 @@ public class CustomListViewAdapter2 extends ArrayAdapter<AshTable2> implements F
 
             currentList.addAll(wholeList);
             currentList.clear();
+
 //            Toast.makeText(getContext(),"No Search Available",Toast.LENGTH_LONG).show();
 
         } else {
             for (AshTable2 pro : wholeList) {
-                Log.d(LOG_TAG, "filter: 2 searching " + charText + " in " + pro.getStartedate());
-                String start=pro.getStartedate().toLowerCase();
+                Log.d(LOG_TAG, "filter: 2 searching " + charText + " in " + pro.getStartdate());
+                String start=pro.getStartdate().toLowerCase();
                 if (start.equals(charText)) {
-                    Log.d(LOG_TAG, "filter: found " + pro.getStartedate());
+                    Log.d(LOG_TAG, "filter: found " + pro.getStartdate());
                     currentList.add(pro);
                 }
             }
             notifyDataSetChanged();
         }
-
     }
 
 

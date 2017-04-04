@@ -39,9 +39,9 @@ public class Submit_form extends AppCompatActivity {
 
 //    String[] board_size = {"Select Your Size", "8 x 6 ft", "10 x 8 ft", "12 x 8 ft", "12 x 10 ft", "16 x 10 ft", "16 x 12 ft", "20 x 10 ft", "22 x 10 ft", "24 x 12 ft", "30 x 10 ft", "40 x 10 ft", "50 x 10 ft", "60 x 10 ft", "70 x 10 ft", "80 x 10 ft"};
 
-    String nameInput1,nameInput2,nameInput3,nameInput4,nameInput5,nameInput6,nameInput7, nameInput8,nameInput9,nameInput10,nameInput11,nameInput12,nameInput13,nameInput14,nameInput15,nameInput16,nameInput17,nameInput18,nameInput19,nameInput20,nameInput21,nameInput22,nameInput23, nameInput24, nameInput25, nameInput26, nameInput27, nameInput28, nameInput29, nameInput30, nameInput31, nameInput32, nameInput33,nameInput34,nameInput35,nameInput36,nameInput37,nameInput38,nameInput39,nameInput40,nameInput41;
+    String nameInput1,nameInput2,nameInput3,nameInput4,nameInput5,nameInput6,nameInput7, nameInput8,nameInput9,nameInput10,nameInput11,nameInput12,nameInput13,nameInput14,nameInput15,nameInput16,nameInput17,nameInput18,nameInput19,nameInput20,nameInput21,nameInput22,nameInput23, nameInput24, nameInput25, nameInput26, nameInput27, nameInput28, nameInput29, nameInput30, nameInput31, nameInput32, nameInput33,nameInput34,nameInput35,nameInput36,nameInput37,nameInput38,nameInput39,nameInput40,nameInput41,nameInput42,nameInput43,nameInput44;
 
-    EditText edtxt1,edtxt2,edtxt3,edtxt4,edtxt5,edtxt6,edtxt7,edtxt1a,edtext11,edtxt2a,edtext22,edtxt3a,edtext33,edtxt4a,edtext44,edtxt5a,edtext55,edtxt12,edtxt13,Board_Size,editText5a,editText5,editText6,editText7,radioButtonxxx,radioButton,editText13,editText13b,editText14,radioButton5,edtxt22,edtxt17,edtxt18,edtxt19,edtxt20,edtxt21,editText1Invs,editText2Invs,editText3Invs,edtxt23,edtxt24;
+    EditText edtxt20yy,edtxt1,edtxt2,edtxt3,edtxt4,edtxt5,edtxt6,edtxt7,edtxt1a,edtext11,edtxt2a,edtext22,edtxt3a,edtext33,edtxt4a,edtext44,edtxt5a,edtext55,edtxt12,edtxt13,Board_Size,editText5a,editText5,editText6,editText7,radioButtonxxx,radioButton,editText13,editText13b,editText14,radioButton5,edtxt22,edtxt17,edtxt18,edtxt19,edtxt20,edtxt21,editText1Invs,editText2Invs,editText3Invs,editText4Invs,editText5Invs,edtxt23,edtxt24;
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("https://docs.google.com/a/aishwaryaled.com/forms/d/e/")
@@ -114,6 +114,8 @@ public class Submit_form extends AppCompatActivity {
                     viewPager.setCurrentItem(current);
                 } else {
 
+
+
                     edtxt1=(EditText)findViewById(R.id.edtxt1);
                     edtxt2=(EditText)findViewById(R.id.edtxt2);
                     edtxt3=(EditText)findViewById(R.id.edtxt3);
@@ -144,6 +146,7 @@ public class Submit_form extends AppCompatActivity {
                     editText13b=(EditText)findViewById(R.id.editText13b);
                     editText14=(EditText)findViewById(R.id.editText14);
                     radioButton5=(EditText)findViewById(R.id.editTextVisib);
+                    edtxt20yy=(EditText)findViewById(R.id.edtxt20yy);
                     edtxt22=(EditText)findViewById(R.id.edtxt22);
                     edtxt17=(EditText)findViewById(R.id.edtxt17);
                     edtxt18=(EditText)findViewById(R.id.edtxt18);
@@ -153,55 +156,64 @@ public class Submit_form extends AppCompatActivity {
                     editText1Invs=(EditText)findViewById(R.id.editText1Invs);
                     editText2Invs=(EditText)findViewById(R.id.editText2Invs);
                     editText3Invs=(EditText)findViewById(R.id.editText3Invs);
+                    editText4Invs=(EditText)findViewById(R.id.editText4Invs);
+                    editText5Invs=(EditText)findViewById(R.id.editText5Invs);
                     edtxt23=(EditText)findViewById(R.id.edtxt23);
                     edtxt24=(EditText)findViewById(R.id.edtxt24);
 
 
-                    nameInput1	=	edtxt1.getText().toString();
-                    nameInput2	=	edtxt2.getText().toString();
-                    nameInput3	=	edtxt3.getText().toString();
-                    nameInput4	=	edtxt4.getText().toString();
-                    nameInput5	=	edtxt5.getText().toString();
-                    nameInput6	=	edtxt6.getText().toString();
-                    nameInput7	=	edtxt7.getText().toString();
-                    nameInput8	=	edtxt1a.getText().toString();
-                    nameInput9	=	edtext11.getText().toString();
-                    nameInput10	=	edtxt2a.getText().toString();
-                    nameInput11	=	edtext22.getText().toString();
-                    nameInput12	=	edtxt3a.getText().toString();
-                    nameInput13	=	edtext33.getText().toString();
-                    nameInput14	=	edtxt4a.getText().toString();
-                    nameInput15	=	edtext44.getText().toString();
-                    nameInput16	=	edtxt5a.getText().toString();
-                    nameInput17	=	edtext55.getText().toString();
-                    nameInput18	=	edtxt12.getText().toString();
-                    nameInput19	=	edtxt13.getText().toString();
-                    nameInput20	=	Board_Size.getText().toString();
-                    nameInput21	=	editText5a.getText().toString();
-                    nameInput22	=	editText5.getText().toString();
-                    nameInput23	=	editText6.getText().toString();
-                    nameInput24	=	editText7.getText().toString();
-                    nameInput25	=	radioButtonxxx.getText().toString();
-                    nameInput26	=	radioButton.getText().toString();
-                    nameInput27	=	editText13.getText().toString();
-                    nameInput28	=	editText13b.getText().toString();
-                    nameInput29	=	editText14.getText().toString();
-                    nameInput30	=	radioButton5.getText().toString();
-                    nameInput31	=	edtxt22.getText().toString();
-                    nameInput32	=	edtxt17.getText().toString();
-                    nameInput33	=	edtxt18.getText().toString();
-                    nameInput34	=	edtxt19.getText().toString();
-                    nameInput35	=	edtxt20.getText().toString();
-                    nameInput36	=	edtxt21.getText().toString();
-                    nameInput37	=	editText1Invs.getText().toString();
-                    nameInput38	=	editText2Invs.getText().toString();
-                    nameInput39	=	editText3Invs.getText().toString();
-                    nameInput40	=	edtxt23.getText().toString();
-                    nameInput41	=	edtxt24.getText().toString();
+                    nameInput1  =  edtxt1.getText().toString();
+                    nameInput2 =  edtxt2.getText().toString();
+                    nameInput3 =  edtxt3.getText().toString();
+                    nameInput4 =  edtxt4.getText().toString();
+                    nameInput5 =  edtxt5.getText().toString();
+                    nameInput6 =  edtxt6.getText().toString();
+                    nameInput7 =  edtxt7.getText().toString();
+                    nameInput8 =  edtxt1a.getText().toString();
+                    nameInput9 =  edtext11.getText().toString();
+                    nameInput10    =  edtxt2a.getText().toString();
+                    nameInput11    =  edtext22.getText().toString();
+                    nameInput12    =  edtxt3a.getText().toString();
+                    nameInput13    =  edtext33.getText().toString();
+                    nameInput14    =  edtxt4a.getText().toString();
+                    nameInput15    =  edtext44.getText().toString();
+                    nameInput16    =  edtxt5a.getText().toString();
+                    nameInput17    =  edtext55.getText().toString();
+                    nameInput18    =  edtxt12.getText().toString();
+                    nameInput19    =  edtxt13.getText().toString();
+                    nameInput20    =  Board_Size.getText().toString();
+                    nameInput21    =  editText5a.getText().toString();
+                    nameInput22    =  editText5.getText().toString();
+                    nameInput23    =  editText6.getText().toString();
+                    nameInput24    =  editText7.getText().toString();
+                    nameInput25    =  radioButtonxxx.getText().toString();
+                    nameInput26    =  radioButton.getText().toString();
+                    nameInput27    =  editText13.getText().toString();
+                    nameInput28    =  editText13b.getText().toString();
+                    nameInput29    =  editText14.getText().toString();
+                    nameInput30    =  radioButton5.getText().toString();
+                    nameInput31    =  edtxt22.getText().toString();
+                    nameInput32 =  edtxt17.getText().toString();
+                    nameInput33 =  edtxt18.getText().toString();
+                    nameInput34=  edtxt19.getText().toString();
+                    nameInput35=  edtxt20.getText().toString();
+                    nameInput36=  edtxt20yy.getText().toString();
+                    nameInput37=  edtxt21.getText().toString();
+                    nameInput38    =  editText1Invs.getText().toString();
+                    nameInput39    =  editText2Invs.getText().toString();
+                    nameInput40    =  editText3Invs.getText().toString();
+                    nameInput41    =  editText4Invs.getText().toString();
+                    nameInput42    =  editText5Invs.getText().toString();
+                    nameInput43    =  edtxt23.getText().toString();
+                    nameInput44    =  edtxt24.getText().toString();
 
 
 
-                    Call<Void> completeQuestionnaireCall = spreadsheetWebService.completeQuestionnaire(nameInput1,nameInput2,nameInput3,nameInput4,nameInput5,nameInput6,nameInput7, nameInput8,nameInput9,nameInput10,nameInput11,nameInput12,nameInput13,nameInput14,nameInput15,nameInput16,nameInput17,nameInput18,nameInput19,nameInput20,nameInput21,nameInput22,nameInput23, nameInput24, nameInput25, nameInput26, nameInput27, nameInput28, nameInput29, nameInput30, nameInput31, nameInput32,nameInput33,nameInput34,nameInput35,nameInput36,nameInput37,nameInput38,nameInput39,nameInput40,nameInput41);
+
+
+
+
+                    Call<Void> completeQuestionnaireCall = spreadsheetWebService.completeQuestionnaire(nameInput1,nameInput2,nameInput3,nameInput4,nameInput5,nameInput6,nameInput7, nameInput8,nameInput9,nameInput10,nameInput11,nameInput12,nameInput13,nameInput14,nameInput15,nameInput16,nameInput17,nameInput18,nameInput19,nameInput20,nameInput21,nameInput22,nameInput23, nameInput24, nameInput25, nameInput26, nameInput27, nameInput28, nameInput29, nameInput30, nameInput31, nameInput32,nameInput33,nameInput34,nameInput35,nameInput36,nameInput37,nameInput38,nameInput39,nameInput40,nameInput41,nameInput42,nameInput43,nameInput44);
                     completeQuestionnaireCall.enqueue(callCallback);
 
                     finish();
@@ -389,7 +401,10 @@ public class Submit_form extends AppCompatActivity {
                 @Field("entry.1196010608") String Marketing_Person_Name1,
                 @Field("entry.1411096816") String Marketing_Person_Name2,
                 @Field("entry.1675463290") String Marketing_Person_Name3,
-                @Field("entry.1248111974") String Marketing_Remarks1
+                @Field("entry.1248111974") String Marketing_Remarks1,
+                @Field("entry.128979908") String Marketing_Remarks12,
+                @Field("entry.875952398") String Marketing_Remarks13,
+                @Field("entry.993195456") String Marketing_Remarks14
 
         );
     }
@@ -544,4 +559,6 @@ public class Submit_form extends AppCompatActivity {
 //            textView28.setText("Null");
 //        }
 //    }
+
+
 }

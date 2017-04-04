@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.aisw.app.R;
+import com.aisw.app.utils.AshTable;
 import com.aisw.app.utils.AshTable2;
 import com.aisw.app.utils.CustomListViewAdapter2;
 
@@ -39,7 +40,6 @@ import static java.util.Calendar.DATE;
 
 
 public class SearchFragment extends Fragment {
-
 
 
     ListView lstv22;
@@ -72,7 +72,6 @@ public class SearchFragment extends Fragment {
                 container, false);
 
 
-
         sMonthIni = C.get(Calendar.MONTH);
         sDayIni = C.get(Calendar.DAY_OF_MONTH);
         sYearIni = C.get(Calendar.YEAR);
@@ -85,9 +84,7 @@ public class SearchFragment extends Fragment {
 
         inputSearch1 = (EditText) view.findViewById(R.id.inputSearch1);
 
-        noSearch=(TextView) view.findViewById(R.id.noSearch);
-
-
+        noSearch = (TextView) view.findViewById(R.id.noSearch);
 
 
         inputSearch1.addTextChangedListener(new TextWatcher() {
@@ -95,9 +92,9 @@ public class SearchFragment extends Fragment {
             public void afterTextChanged(Editable arg) {
                 // TODO Auto-generated method stub
 
-                    String text = inputSearch1.getText().toString().toLowerCase(Locale.getDefault());
-                    adapter2.filter(text);
-                    listCheck();
+                String text = inputSearch1.getText().toString().toLowerCase(Locale.getDefault());
+                adapter2.filter(text);
+                listCheck();
 
 
             }
@@ -134,8 +131,6 @@ public class SearchFragment extends Fragment {
 
             }
         });
-
-
 
 
 //
@@ -187,11 +182,7 @@ public class SearchFragment extends Fragment {
 //        });
 
 
-
-
 //
-
-
 
 
     public class ReadJSON extends AsyncTask<String, Integer, String> {
@@ -218,6 +209,7 @@ public class SearchFragment extends Fragment {
 
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject prdobj = jsonArray.getJSONObject(i);
+
 
                     String test1 = prdobj.getString("Timestamp");
                     String test2 = prdobj.getString("Company_Name");
@@ -250,22 +242,24 @@ public class SearchFragment extends Fragment {
                     String test29 = prdobj.getString("Other_Cost_2");
                     String test30 = prdobj.getString("Gross_Amount");
                     String test31 = prdobj.getString("Bill_Required");
-                    String test32 = prdobj.getString("Company_Name");
+                    String test32 = prdobj.getString("Company_Name2");
                     String test33 = prdobj.getString("Billing_In_Name_Of");
                     String test34 = prdobj.getString("Service_Tax");
                     String test35 = prdobj.getString("Total_Amount_2");
                     String test36 = prdobj.getString("Advance_Amount");
-                    String test37 = prdobj.getString("Credit_Period");
-                    String test38 = prdobj.getString("Photographer_Details");
-                    String test39 = prdobj.getString("Video_Person_Details");
-                    String test40 = prdobj.getString("Stage_Sound_Light");
-                    String test41 = prdobj.getString("Marketing_Person_Name");
-                    String test42 = prdobj.getString("Remarks");
+                    String test37 = prdobj.getString("Balance_Amount");
+                    String test38 = prdobj.getString("Credit_Period");
+                    String test39 = prdobj.getString("Photographer_Details");
+                    String test40 = prdobj.getString("Video_Person_Details");
+                    String test41 = prdobj.getString("Stage_Details");
+                    String test42 = prdobj.getString("Sound_Details");
+                    String test43 = prdobj.getString("Stage_Details");
+                    String test44 = prdobj.getString("Marketing_Person_Name");
+                    String test45 = prdobj.getString("Remarks");
 
 
-                    array222.add(new AshTable2(test1, test2, test3, test4, test5, test6, test7, test8, test9, test10, test11, test12, test13, test14, test15, test16, test17, test18, test19, test20, test21, test22, test23, test24, test25, test26, test27, test28, test29, test30, test31, test32, test33, test34, test35, test36, test37, test38, test39, test40, test41, test42));
+                    array222.add(new AshTable2(test1, test2, test3, test4, test5, test6, test7, test8, test9, test10, test11, test12, test13, test14, test15, test16, test17, test18, test19, test20, test21, test22, test23, test24, test25, test26, test27, test28, test29, test30, test31, test32, test33, test34, test35, test36, test37, test38, test39, test40, test41, test42, test43, test44, test45));
                 }
-
 
 
             } catch (JSONException e) {
@@ -308,15 +302,15 @@ public class SearchFragment extends Fragment {
     private void showDispatchCalendar() {
         Calendar c1 = Calendar.getInstance();
         DatePickerDialog da = new DatePickerDialog(getActivity(), mDateSetListener, mYearIni, mMonthIni, mDayIni);
-        c1.add(DATE,0);
+        c1.add(Calendar.DAY_OF_MONTH, 10);
 //        Date newDate = c1.getTime();
 //        da.getDatePicker().setMinDate(newDate.getTime());
         long newDate = System.currentTimeMillis();
+//        da.getDatePicker().setMinDate(newDate);
         da.getDatePicker().setMinDate(newDate);
         da.show();
 
     }
-
 
 
     private void colocar_fecha() {
@@ -342,14 +336,12 @@ public class SearchFragment extends Fragment {
 
     public void listCheck() {
 
-        if(adapter2.getCount()!=0){
+        if (adapter2.getCount() != 0) {
             noSearch.setText(" ");
-        }else {
+        } else {
             noSearch.setText("No Search Result Found");
         }
     }
-
-
 
 
 //    private void colocar_fecha() {
@@ -393,16 +385,11 @@ public class SearchFragment extends Fragment {
     }
 
 
-
     @Override
     public void onPause() {
 //        Log.e("DEBUG", "OnPause of loginFragment");
         super.onPause();
     }
-
-
-
-
 
 
 }

@@ -141,6 +141,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             listTitleTextArrowView.setText("");
 
         }
+
+       if (listPosition == SUBITEM1_1)
+            listTitleTextIconView.setText(context.getResources().getString(R.string.fa_music));
         return convertView;
     }
 
