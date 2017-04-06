@@ -48,6 +48,10 @@ public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Fil
             convertView = layoutInflater.inflate(R.layout.list_view, null, true);
         }
 
+        try {
+
+
+
         AshTable pro = getItem(position);
 
         final String st1 = pro.getTimestamp();
@@ -176,6 +180,10 @@ public class CustomListViewAdapter extends ArrayAdapter<AshTable> implements Fil
                 context.startActivity(intent);
             }
         });
+
+        }catch (Exception e){
+
+        }
 
         return convertView;
     }

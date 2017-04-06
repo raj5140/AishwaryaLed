@@ -1,6 +1,8 @@
 package com.aisw.app.fragment;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
@@ -34,6 +36,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 import static java.util.Calendar.DATE;
@@ -72,9 +75,9 @@ public class SearchFragment extends Fragment {
                 container, false);
 
 
-        sMonthIni = C.get(Calendar.MONTH);
-        sDayIni = C.get(Calendar.DAY_OF_MONTH);
-        sYearIni = C.get(Calendar.YEAR);
+//        sMonthIni = C.get(Calendar.MONTH);
+//        sDayIni = C.get(Calendar.DAY_OF_MONTH);
+//        sYearIni = C.get(Calendar.YEAR);
 
 
         getActivity().setTitle("Search");
@@ -113,7 +116,6 @@ public class SearchFragment extends Fragment {
 
         });
 
-
         adapter2 = new CustomListViewAdapter2(getActivity(), R.layout.home_list_view, array222);
 
 
@@ -127,10 +129,17 @@ public class SearchFragment extends Fragment {
                 InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(inputSearch1.getWindowToken(), 0);
 
+//                final Calendar cal = Calendar.getInstance();
+//                mYearIni=cal.get(Calendar.YEAR);
+//                mMonthIni=cal.get(Calendar.MONTH);
+//                mDayIni=cal.get(Calendar.DAY_OF_MONTH);
+
                 showDispatchCalendar();
 
             }
         });
+
+
 
 
 //
@@ -156,7 +165,12 @@ public class SearchFragment extends Fragment {
         return view;
 
 
+
+
+
     }
+
+
 
 //    @Override
 //    public void onRefresh() {
@@ -182,7 +196,6 @@ public class SearchFragment extends Fragment {
 //        });
 
 
-//
 
 
     public class ReadJSON extends AsyncTask<String, Integer, String> {
@@ -299,16 +312,45 @@ public class SearchFragment extends Fragment {
 
     }
 
+
+
     private void showDispatchCalendar() {
         Calendar c1 = Calendar.getInstance();
-        DatePickerDialog da = new DatePickerDialog(getActivity(), mDateSetListener, mYearIni, mMonthIni, mDayIni);
-        c1.add(Calendar.DAY_OF_MONTH, 10);
-//        Date newDate = c1.getTime();
-//        da.getDatePicker().setMinDate(newDate.getTime());
-        long newDate = System.currentTimeMillis();
-//        da.getDatePicker().setMinDate(newDate);
-        da.getDatePicker().setMinDate(newDate);
-        da.show();
+//        DatePickerDialog da = new DatePickerDialog(getActivity(), mDateSetListener, mYearIni, mMonthIni, mDayIni);
+//        c1.add(Calendar.MONTH, -1);
+////        long currentTime = new Date(System.currentTimeMillis()).getTime();
+////        Date newDate = new Date(currentTime - 29 * 24 * 3600 * 1000);
+//
+//        da.getDatePicker().setMinDate(new Date(System.currentTimeMillis()).getTime());
+//        da.show();
+//
+////        long newDate = System.currentTimeMillis();
+////        da.getDatePicker().setMinDate(newDate);
+////        da.getDatePicker().setMinDate(newDate);
+//        da.show();
+
+
+
+        DatePickerDialog dd = new DatePickerDialog(getActivity(),
+                new DatePickerDialog.OnDateSetListener() {
+
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                        try {
+
+                            mYearIni = year;
+                            mMonthIni = monthOfYear;
+                            mDayIni = dayOfMonth;
+
+                            colocar_fecha();
+                            // Do your stuff
+                        } catch (Exception ex) {
+
+                        }
+                    }
+                }, c1.get(Calendar.YEAR), c1.get(Calendar.MONTH), c1.get(Calendar.DAY_OF_MONTH));
+        dd.show();
+
 
     }
 
@@ -325,6 +367,7 @@ public class SearchFragment extends Fragment {
     private DatePickerDialog.OnDateSetListener mDateSetListener =
             new DatePickerDialog.OnDateSetListener() {
                 public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
                     mYearIni = year;
                     mMonthIni = monthOfYear;
                     mDayIni = dayOfMonth;
@@ -334,13 +377,18 @@ public class SearchFragment extends Fragment {
             };
 
 
+
+
     public void listCheck() {
 
         if (adapter2.getCount() != 0) {
             noSearch.setText(" ");
         } else {
-            noSearch.setText("No Search Result Found");
+
+            noSearch.setText(" No Search Result Found ");
+
         }
+
     }
 
 
@@ -390,6 +438,7 @@ public class SearchFragment extends Fragment {
 //        Log.e("DEBUG", "OnPause of loginFragment");
         super.onPause();
     }
+
 
 
 }

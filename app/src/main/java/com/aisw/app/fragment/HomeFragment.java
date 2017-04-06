@@ -4,6 +4,7 @@ import android.app.LocalActivityManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -23,7 +24,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,25 +52,26 @@ import java.net.URLConnection;
 
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class HomeFragment extends Fragment implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
 
-//    ProgressDialog pd;
-//    private  String[] board_size = {"Select Your Size", "8 x 6 ft", "10 x 8 ft", "12 x 8 ft", "12 x 10 ft", "16 x 10 ft", "16 x 12 ft", "20 x 10 ft", "22 x 10 ft", "24 x 12 ft", "30 x 10 ft", "40 x 10 ft", "50 x 10 ft", "60 x 10 ft", "70 x 10 ft", "80 x 10 ft"};
-
-//    TabHost tabHost;
 
     ListView lstv11;
+    TextView pbtxt;
+
+    private AnimationDrawable animationDrawable;
+    private ImageView mProgressBar;
+
     ArrayList<AshTable> array111;
 
 
     SwipeRefreshLayout mSwipeRefreshLayout;
 
-    private Button bt1;
-    private Button bt2;
+    private Button bt1,bt2;
 
-    CustomListViewAdapter adapter;
 
 
     @Override
@@ -93,8 +97,17 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
 
         lstv11 = (ListView) view.findViewById(R.id.lst_vw1);
 
+
+
+
         bt1 = (Button) view.findViewById(R.id.but_add);
         bt1.setOnClickListener(this);
+
+        mProgressBar = (ImageView)view.findViewById(R.id.main_progress);
+        mProgressBar.setBackgroundResource(R.drawable.probar);
+        animationDrawable = (AnimationDrawable)mProgressBar.getBackground();
+
+        pbtxt=(TextView)view.findViewById(R.id.pbtxt);
 
 
 //
@@ -155,17 +168,35 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
 
         @Override
         protected String doInBackground(String... params) {
+
             return readURL(params[0]);
+
         }
 
         @Override
         protected void onPreExecute() {
+
+
+
+            mProgressBar.setVisibility(View.VISIBLE);
+
+
+            animationDrawable.start();
+            pbtxt.setVisibility(View.VISIBLE);
+
 
         }
 
 
         @Override
         protected void onPostExecute(String content) {
+
+
+            mProgressBar.setVisibility(View.GONE);
+
+            animationDrawable.stop();
+
+            pbtxt.setVisibility(View.INVISIBLE);
 
             try {
 
@@ -224,6 +255,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
 
 
                     array111.add(new AshTable(test1, test2, test3, test4, test5, test6, test7, test8, test9, test10, test11, test12, test13, test14, test15, test16, test17, test18, test19, test20, test21, test22, test23, test24, test25, test26, test27, test28, test29, test30, test31, test32, test33, test34, test35, test36, test37, test38, test39, test40, test41, test42, test43, test44, test45));
+
                 }
 
 
@@ -231,11 +263,22 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
                 e.printStackTrace();
             }
 
-            final CustomListViewAdapter adapter = new CustomListViewAdapter(getActivity(), R.layout.home_list_view, array111);
+            try{
+
+            CustomListViewAdapter adapter = new CustomListViewAdapter(getActivity(), R.layout.home_list_view, array111);
             lstv11.setAdapter(adapter);
 
 
+
+
+            }catch (Exception e){
+
+            }
+
+
+
             mSwipeRefreshLayout.setRefreshing(false);
+
 
         }
 
@@ -268,7 +311,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Swip
     public void onClick(View v) {
 
         if (v == bt1) {
-//            showLoginDialog1();
             Intent intent = new Intent(getActivity(), Submit_form.class);
             startActivity(intent);
 
